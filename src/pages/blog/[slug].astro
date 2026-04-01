@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Logo from '../../components/Logo.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={`${post.data.title} — homerunn`} description={post.data.description}>
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E5E5E5]">
+    <div class="max-w-[1100px] mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/"><Logo color="amber" width={120} /></a>
+      <a
+        href="/#contact"
+        class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-sm px-5 py-2.5 rounded transition-colors"
+      >
+        Let's talk
+      </a>
+    </div>
+  </header>
+
+  <!-- ARTICLE HEADER -->
+  <section class="bg-[#111111] pt-36 pb-16 px-6">
+    <div class="max-w-[760px] mx-auto">
+      <a href="/blog" class="font-inter text-[#6B7280] text-sm hover:text-white transition-colors mb-6 inline-block">&larr; Back to blog</a>
+      <time class="font-inter text-[#D97706] text-sm font-semibold block mb-4">
+        {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+      <h1 class="font-sora font-bold text-4xl md:text-5xl text-white leading-tight">
+        {post.data.title}
+      </h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-[760px] mx-auto prose-styles">
+      <Content />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#F7F7F7] py-16 px-6 border-t border-[#E5E5E5]">
+    <div class="max-w-[760px] mx-auto text-center">
+      <p class="font-sora font-bold text-2xl text-[#111111] mb-3">Ready to talk?</p>
+      <p class="font-inter text-[#6B7280] text-lg mb-6">If this resonated, let's see if it makes sense to work together.</p>
+      <a
+        href="/#contact"
+        class="inline-block bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded transition-colors"
+      >
+        Get in touch
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#111111] border-t border-[#1F1F1F] py-8 px-6">
+    <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="/"><Logo color="amber" width={100} /></a>
+      <p class="font-inter text-[#6B7280] text-sm">&copy; {new Date().getFullYear()} homerunn. Columbus, OH.</p>
+      <a href="/blog" class="font-inter text-[#6B7280] hover:text-white text-sm transition-colors">Blog</a>
+    </div>
+  </footer>
+
+</Layout>
+
+<style>
+  .prose-styles :global(h2) {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #111111;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .prose-styles :global(p) {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose-styles :global(ul) {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .prose-styles :global(li) {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-styles :global(strong) {
+    font-weight: 600;
+    color: #111111;
+  }
+
+  .prose-styles :global(a) {
+    color: #D97706;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .prose-styles :global(a:hover) {
+    color: #B45309;
+  }
+</style>

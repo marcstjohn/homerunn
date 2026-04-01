@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sora: 'Sora', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --color-amber: #D97706;
+  --color-amber-hover: #B45309;
+  --color-charcoal: #111111;
+  --color-muted: #6B7280;
+  --color-soft: #F7F7F7;
+  --color-border: #E5E5E5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #111111;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Sora', sans-serif;
+  }
+}

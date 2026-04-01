@@ -1,0 +1,48 @@
+---
+interface Props {
+  color?: 'amber' | 'white' | 'black';
+  width?: number;
+}
+
+const { color = 'amber', width = 130 } = Astro.props;
+
+const fillColor = {
+  amber: '#D97706',
+  white: '#FFFFFF',
+  black: '#111111',
+}[color];
+
+const height = Math.round((width / 250) * 68);
+---
+
+<!--
+  Ascending wordmark. All letters share y baseline.
+  Sizes scale from 20px (h) to 40px (final n) — roughly 2x range.
+  x positions hand-tuned for Sora Bold letter widths at each size.
+  viewBox: 260 wide × 52 tall
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 250 68"
+  width={width}
+  height={height}
+  role="img"
+  aria-label="homerunn"
+>
+  <title>homerunn</title>
+  <text
+    font-family="'Sora', sans-serif"
+    font-weight="700"
+    fill={fillColor}
+    dominant-baseline="alphabetic"
+  >
+    <tspan x="2"   y="46" font-size="20">h</tspan>
+    <tspan x="17"  y="46" font-size="24">o</tspan>
+    <tspan x="35"  y="46" font-size="30">m</tspan>
+    <tspan x="68"  y="46" font-size="35">e</tspan>
+    <tspan x="95"  y="46" font-size="40">r</tspan>
+    <tspan x="117" y="46" font-size="47">u</tspan>
+    <tspan x="150" y="46" font-size="55">n</tspan>
+    <tspan x="190" y="46" font-size="62">n</tspan>
+  </text>
+</svg>
