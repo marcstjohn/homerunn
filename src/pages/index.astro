@@ -317,7 +317,8 @@ import Logo from '../components/Logo.astro';
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-12">
         Fill out the form. Tell me where you are and what's not moving. I'll get back to you within 48 hours and tell you honestly if I can help.
       </p>
-      <form name="contact" method="POST" class="space-y-5">
+      <form name="contact" method="POST" data-netlify="true" class="space-y-5">
+        <input type="hidden" name="form-name" value="contact" />
         <div class="grid md:grid-cols-2 gap-5">
           <div>
             <label for="name" class="block font-inter text-[#6B7280] text-sm mb-2">Your name</label>
