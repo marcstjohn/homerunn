@@ -5,7 +5,7 @@ import Logo from '../components/Logo.astro';
 
 <Layout
   title="homerunn — Full-Stack Growth Marketing"
-  description="Most ecommerce brands have good products but thin content. No one explains the product well. homerunn builds marketing around education. The sales follow."
+  description="Most ecommerce brands aren't short on marketing activity. They're short on content that builds a confident buyer. homerunn builds the full system. The sales follow."
 >
 
   <!-- NAV -->
@@ -22,7 +22,7 @@ import Logo from '../components/Logo.astro';
   </header>
 
   <!-- HERO -->
-  <section class="bg-[#111111] pt-40 pb-24 px-6">
+  <section class="bg-[#111111] diamond-texture pt-40 pb-24 px-6">
     <div class="max-w-[760px] mx-auto">
       <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-6">
         For ecommerce brands doing $100K–$3M in revenue
@@ -31,7 +31,7 @@ import Logo from '../components/Logo.astro';
         The best marketing educates first. The sales follow.
       </h1>
       <p class="font-inter text-[#6B7280] text-xl leading-relaxed mb-6 max-w-[620px]">
-        Most ecommerce brands have good products but thin content. No one explains the product well, no one builds confidence in the buyer. Studies on content-led marketing consistently show conversion rates 4-5x higher when buyers are educated before the sale. That gap is where revenue lives.
+        Most ecommerce brands aren't short on marketing activity. They're short on content that builds a confident buyer. That gap is where revenue lives.
       </p>
       <!-- Proof bar -->
       <div class="flex flex-wrap gap-x-6 gap-y-2 mb-10 font-inter text-[#6B7280] text-sm">
@@ -47,7 +47,7 @@ import Logo from '../components/Logo.astro';
         href="#contact"
         class="inline-block bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded transition-colors"
       >
-        Tell Me About Your Business
+        Start the Conversation
       </a>
     </div>
   </section>
@@ -56,20 +56,23 @@ import Logo from '../components/Logo.astro';
   <section class="bg-white py-28 px-6">
     <div class="max-w-[760px] mx-auto">
       <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">The problem</p>
-      <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-8">Sound Familiar?</h2>
+      <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-8">Why Good Products Don't Always Sell</h2>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        Your product is good. But the marketing around it isn't doing the work. The content reads like a spec sheet. The emails don't teach anything. The pages answer no questions.
+        The problem isn't the products. It's the marketing around them.
+      </p>
+      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
+        Most content is built for buyers who already know what they want. It describes the products, lists the specs, shows the price. That works fine for capturing demand that already exists. It does nothing to build it.
       </p>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-10">
-        Buyers don't pull the trigger on products they don't understand. Education builds trust. Trust converts. When the marketing skips that step, traffic stays traffic. It never becomes revenue.
+        The customers who come back, buy more, and bring others need something different. They need to understand their situation before they're asked to decide. They need to trust the brand before they're asked to buy. When the marketing skips that work, you get traffic, the occasional sale, and no real relationship.
       </p>
       <ul class="space-y-3">
         {[
-          'Content that describes the product but doesn\'t sell it',
-          'Email that exists but doesn\'t generate revenue',
-          "Traffic that bounces because the pages don't convert",
-          "Ads that drive clicks to a site that can't close",
-          "You can't tell which channel is actually working",
+          "Content that describes the products but never builds trust in the brand",
+          "Nothing that helps a buyer understand their situation or feel confident about the decision",
+          "Email that exists but doesn't teach or earn revenue",
+          "Traffic that bounces because the pages don't answer the real questions",
+          "Ads driving clicks to a site that can't close",
         ].map((item) => (
           <li class="flex items-start gap-3">
             <span class="text-[#D97706] font-bold mt-1">—</span>
@@ -81,18 +84,39 @@ import Logo from '../components/Logo.astro';
   </section>
 
   <!-- THE FIX -->
-  <section class="bg-[#111111] py-28 px-6">
+  <section class="bg-[#111111] diamond-texture py-28 px-6">
     <div class="max-w-[760px] mx-auto">
       <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">The fix</p>
-      <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-8">Marketing Built Around Education. Everything Else Follows.</h2>
+      <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-8">Marketing Built Around the Confident Buyer. Everything Else Follows.</h2>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        The foundation is education. Content that actually explains your product: clearly, honestly, in a way that reads like something a person wrote. When that's done right, everything else gets stronger. SEO brings in buyers who already trust you. Emails give people a reason to come back. Ads perform better because the pages behind them actually close.
+        A confident buyer goes through four stages.
+      </p>
+      <div class="space-y-4 mb-6">
+        <div>
+          <span class="font-inter text-[#D97706] font-semibold text-lg">1. Their situation.</span>
+          <span class="font-inter text-[#6B7280] text-lg"> What they're dealing with, why it matters, and how to think about the decision.</span>
+        </div>
+        <div>
+          <span class="font-inter text-[#D97706] font-semibold text-lg">2. The products.</span>
+          <span class="font-inter text-[#6B7280] text-lg"> What they are, how they work, and why they're the right fit.</span>
+        </div>
+        <div>
+          <span class="font-inter text-[#D97706] font-semibold text-lg">3. The brand.</span>
+          <span class="font-inter text-[#6B7280] text-lg"> The story, the point of view, the people behind it.</span>
+        </div>
+        <div>
+          <span class="font-inter text-[#D97706] font-semibold text-lg">4. What buying from you is actually like.</span>
+          <span class="font-inter text-[#6B7280] text-lg"> The process, what to expect, what happens after.</span>
+        </div>
+      </div>
+      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
+        Most brands cover the products and stop there. The ones that build all four are the ones with conversion rates that make the math work: lower ad costs, higher AOV, fewer refunds, more repeat buyers.
       </p>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        The way a brand educates is also its identity: the voice, the story, the point of view on the product. That's what makes people remember you instead of clicking away.
+        That's the system I build. SEO brings in buyers who already understand their situation. Email teaches and keeps people coming back. The pages behind ads answer every question before it's asked. The brand story makes you memorable instead of interchangeable.
       </p>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed">
-        I build that system. I've been building it for a specialty ecommerce retailer for years and the business keeps growing. That's what I do at homerunn.
+        I've been building this for a specialty ecommerce retailer for years and the business keeps growing. That's what I do at homerunn.
       </p>
     </div>
   </section>
@@ -118,12 +142,12 @@ import Logo from '../components/Logo.astro';
           },
           {
             title: 'Content & CRO',
-            body: 'Landing pages, product pages, blog content. Written to explain the product clearly, build trust, and turn visitors into buyers.',
+            body: 'Landing pages, product pages, blog content. Written to explain the products clearly, build trust, and turn visitors into buyers.',
             proof: '17% average order value increase through CRO and landing page optimization.',
           },
           {
             title: 'Website Development',
-            body: "I lead the build and work with designers to get it right. Brand story, page structure, product presentation. The website is the foundation everything else runs on.",
+            body: "I lead the build and bring in a strong designer to execute it. Brand story, page structure, product presentation. The website is the foundation everything else runs on.",
             proof: '',
           },
           {
@@ -148,13 +172,13 @@ import Logo from '../components/Logo.astro';
   </section>
 
   <!-- THE NUMBERS -->
-  <section class="bg-[#111111] py-28 px-6">
+  <section class="bg-[#111111] diamond-texture py-28 px-6">
     <div class="max-w-[1100px] mx-auto">
       <div class="max-w-[760px] mb-16">
         <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">The numbers</p>
         <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-4">Results I Can Show You</h2>
         <p class="font-inter text-[#6B7280] text-lg leading-relaxed">
-          The average ecommerce brand grows around 8–9% a year. What you see below came from running every marketing channel for a specialty ecommerce retailer — work I'm still doing today. I built the system from the ground up, made the channels connect, and keep learning from the brand and the people behind it every week. The growth is in the method. But it doesn't hurt to work with a brand that actually delivers on its promise and treats people right. Both are true here. My outside availability is reserved for clients who are the right fit.
+          The average ecommerce brand grows around 8–9% a year. What you see below came from running every marketing channel for a specialty ecommerce retailer — work I'm still doing today. I built the system from the ground up, made the channels connect, and keep learning from the brand and the people behind it every week. The growth is in the method. But it doesn't hurt to work with a brand that actually delivers on its promise and treats people right. For less than the cost of a junior marketing hire, you get every channel running together.
         </p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#1F1F1F]">
@@ -231,7 +255,7 @@ import Logo from '../components/Logo.astro';
         {[
           {
             q: 'Can one person really handle all of this?',
-            a: "Yes. I run the system and handle every channel: SEO, email, content, Meta ads, CRO. I have a designer I work with on sites, a writer I trained for content production, and a PPC specialist I bring in when the project calls for it. I manage all of it. You get one person who owns the whole thing.",
+            a: "Yes. I run the system and own every channel: SEO, email, content, Meta ads, CRO. When a project needs it, I bring in people who are genuinely good at what they do — a designer, a writer, a PPC specialist, and someone I work closely with on growth tactics. You still get one person who owns the strategy and makes sure everything connects.",
           },
           {
             q: 'How do I know your results will transfer to my business?',
@@ -291,31 +315,19 @@ import Logo from '../components/Logo.astro';
       <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">About</p>
       <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-8">Who's Behind This</h2>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        I'm Marc St. John, a marketer and writer based in Columbus, Ohio. For four years I've been running the marketing and writing for a small specialty ecommerce business. The work keeps compounding.
+        I'm Marc St. John, a marketer and writer based in Columbus, Ohio.
       </p>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        I spent my whole life playing baseball. Hitting a baseball, specifically. From the time I could hold a bat, it was the thing I kept coming back to. More reps, better mechanics, a better approach at the plate.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        Hitting teaches you things you can't learn any other way. It's high pressure, it's public, and the feedback is immediate and honest. You can foul it off, hit it weakly, fly out, or barrel it. You can strike out and everyone on the field can feel it. What it teaches you is to refine your approach and build resilience. The ball doesn't care how hard you worked. It just tells you the truth.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        Baseball also made me appreciate the numbers. Not because I love data for its own sake, but because in baseball the stats actually tell the story. Who's producing. Where performance is breaking down. What needs to change. Marketing works the same way. The numbers are there. You either read them or you don't.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        What hitting gave me was a mindset: take your swings, trust the approach, and let the work pay off when it counts. That's how I approach marketing.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        For the past four years: SEO and content strategy, Klaviyo email from zero, Meta ad campaigns, landing page optimization, and website development with a designer. Every channel running together. The business went from $400K to $2.7M.
+        For the past four years I've led the marketing for a specialty ecommerce retailer — SEO and content strategy, Klaviyo email from zero, Meta ad campaigns, landing page optimization, and website development alongside a designer. Every channel running together. The business went from $400K to $2.7M. I'm also a former English teacher. It turns out that's better preparation for this work than most marketing degrees.
       </p>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-8">
-        I'm also a former English teacher. I write clearly, explain without jargon, and I know the difference between a strategy that looks good in a deck and one that actually moves revenue.
+        The other thing that shaped how I work: I spent my whole life playing baseball. Hitting, specifically. High pressure, public, and the feedback is immediate. You barrel it or you don't. What it taught me is to refine the approach, trust the work, and let the numbers tell the truth. Marketing works the same way.
       </p>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="bg-[#111111] py-28 px-6">
+  <section id="contact" class="bg-[#111111] diamond-texture py-28 px-6">
     <div class="max-w-[760px] mx-auto">
       <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">Get in touch</p>
       <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-4">
@@ -351,7 +363,7 @@ import Logo from '../components/Logo.astro';
             <label for="email" class="block font-inter text-[#6B7280] text-sm mb-2">Email address</label>
             <input id="email" name="email" type="email" required
               class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded focus:outline-none focus:border-[#D97706] transition-colors"
-              placeholder="jane@yourbrand.com" />
+              placeholder="your@email.com" />
           </div>
         </div>
         <div>
