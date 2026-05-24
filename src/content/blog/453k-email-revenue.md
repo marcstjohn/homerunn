@@ -22,7 +22,7 @@ Email is not a broadcast channel. You do not just send things to people.
 
 A real email program is a set of automated systems that respond to customer behavior, plus a campaign calendar that teaches and sells in a rhythm. When those two things are in place, email becomes the most profitable channel you have. It keeps paying you after you stop spending money on it.
 
-I had the list. The system was missing.
+The system was missing.
 
 ---
 
@@ -38,9 +38,9 @@ Most brands send a discount code and stop there. A real welcome sequence does mo
 
 The sequence moves through stages: reminder, validation, urgency. Each email has a different job, and the later emails exist because some people genuinely need more time. Most brands cut the sequence short and leave those people behind.
 
-**Browse abandonment.** Five emails. Someone visited a product page and left without adding anything to their cart. Weaker signal than cart abandonment, so the sequence is softer. But it catches people who were interested and just needed a nudge — people most brands never follow up with at all.
+**Browse abandonment.** Five emails. Someone visited a product page and left without adding anything to their cart. Weaker signal than cart abandonment, so the sequence is softer. But it catches people who were interested and just needed a nudge. Most brands never follow up with them at all.
 
-**Site abandonment.** Catches people who left before browsing a specific product — they landed on the site but never made it to a product page. Broader signal, so the messaging is broader. Worth running because it captures visitors the other flows miss entirely.
+**Site abandonment.** Catches people who left before browsing a specific product. They landed on the site but never made it to a product page. Broader signal, so the messaging is broader. Worth running because it captures visitors the other flows miss entirely.
 
 **Post-purchase.** This is where most brands leave the most money.
 
@@ -62,7 +62,7 @@ You cannot send the same email to everyone.
 
 A customer who bought last month is not the same as someone who visited once and never came back. Sending them the same message is not just lazy. It hurts deliverability and trains people to stop opening.
 
-The segments that mattered most were built around recency and behavior — how recently someone visited, what they looked at, whether they bought. Different segments get different messages at different frequencies.
+The segments that mattered most were built around recency and behavior: how recently someone visited, what they looked at, whether they bought. Different segments get different messages at different frequencies.
 
 I moved from no segmentation to proper segmentation in July 2025. The revenue curve follows that timeline almost exactly.
 
