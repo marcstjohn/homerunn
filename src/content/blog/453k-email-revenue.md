@@ -4,15 +4,9 @@ description: "How I built a Klaviyo email program from zero to $453K in attribut
 date: 2026-05-24
 ---
 
-Most ecommerce brands have an email list. Most of them are barely using it.
-
-A welcome email that goes out once. A promotional blast when they need a sales spike. A flow someone set up a few years ago and never touched again.
-
-I know this because the specialty retailer I was running marketing for looked exactly like this. Mailchimp configured by late 2022. Sitting mostly unused while I focused on building SEO and content.
-
 Email launched properly in July 2025. In six months, it generated $453,309 in attributed revenue. Klaviyo puts the account in the top 10% of operators on the platform.
 
-Here's what changed.
+The specialty retailer I was running marketing for had Mailchimp configured since late 2022. It sat mostly unused while I focused on SEO and content. Here's what changed.
 
 ---
 
@@ -56,6 +50,18 @@ I also built a send calendar. Not blasts whenever there's a sale. A real schedul
 
 ---
 
+## Where the list came from
+
+Flows and campaigns don't do anything without subscribers.
+
+The list started at [PLACEHOLDER: list size at launch] when email launched in July 2025. It grew from three places: an on-site pop-up offering something useful in exchange for an email, organic search traffic landing on content and signing up, and Meta ads bringing new people into the funnel.
+
+SEO and email are not separate channels. SEO built the audience. Email monetized it. When both are running, each one makes the other more effective. A subscriber who found you through search is already interested in what you sell. The email program captures that interest before it goes cold.
+
+Most email guides skip this entirely. They treat email like it exists in isolation.
+
+---
+
 ## Segmentation
 
 You cannot send the same email to everyone.
@@ -68,32 +74,16 @@ I moved from no segmentation to proper segmentation in July 2025. The revenue cu
 
 ---
 
-## Where the list came from
-
-Flows and campaigns don't do anything without subscribers.
-
-The list grew from three places. An on-site pop-up offering something useful in exchange for an email. Organic search traffic landing on content and signing up. Meta ads bringing new people into the funnel.
-
-SEO and email are not separate channels. SEO built the audience. Email monetized it. When both are running, each one makes the other more effective. A subscriber who found you through search is already interested in what you sell. The email program captures that interest before it goes cold.
-
-Most email guides skip this entirely. They treat email like it exists in isolation.
-
----
-
 ## What $453K actually required
 
 Six months. One person writing every email, building every flow, managing every segment. Systems built properly the first time and maintained from there.
 
 The flows took a few weeks to build out. The campaign calendar took discipline to keep up. The segmentation took time to define and test.
 
-That's it. No agency. No email specialist.
-
-If you hired an agency to do this, you'd be paying $2,000 to $5,000 a month for Klaviyo management. What you get for that is an account manager who coordinates with a junior staffer executing on templates. The work gets done, but nobody is treating your email program like it's their own business.
-
-The results above came from someone who did exactly that — treated the program like it had to perform, because it did.
+The results came from treating the program like it had to perform. Because it did.
 
 If your Klaviyo account is basically abandoned, the list is not the problem. The list is an asset you have not deployed yet.
 
 ---
 
-*If you want to see what a working email program would look like for your store, [reach out](https://homerunn.com). Email is usually the fastest project to show results.*
+*[Send me your Klaviyo account stats](https://homerunn.com). I'll tell you what I'd fix first.*
