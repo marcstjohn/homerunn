@@ -1,6 +1,6 @@
 ---
-title: "$453K in Email Revenue — and What Made It Work"
-description: "How I built a Klaviyo email program from zero to $453K in attributed revenue — the flows, the campaigns, and what it actually required."
+title: "$453K From Email. This Is How It Happened."
+description: "How I built a Klaviyo email program from zero to $453K in attributed revenue: the flows, the campaigns, and what it actually required."
 date: 2026-05-24
 ---
 
