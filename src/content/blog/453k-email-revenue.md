@@ -78,7 +78,7 @@ I moved from no segmentation to proper segmentation in July 2025. The revenue cu
 
 ## What $453K actually required
 
-Six months. One person writing every email, building every flow, managing every segment. Systems built properly the first time and maintained from there.
+Six months. Systems built properly the first time and maintained from there.
 
 The flows took a few weeks to build out. The campaign calendar took discipline to keep up. The segmentation took time to define and test.
 
