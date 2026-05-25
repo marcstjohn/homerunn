@@ -54,7 +54,7 @@ I also built a send calendar. Not blasts whenever there's a sale. A real schedul
 
 Flows and campaigns don't do anything without subscribers.
 
-The list started at [PLACEHOLDER: list size at launch] when email launched in July 2025. It grew from three places: an on-site pop-up offering something useful in exchange for an email, organic search traffic landing on content and signing up, and Meta ads bringing new people into the funnel.
+The list started at zero when email launched in July 2025. It grew from three places: an on-site pop-up offering something useful in exchange for an email, organic search traffic landing on content and signing up, and Meta ads bringing new people into the funnel.
 
 SEO and email are not separate channels. SEO built the audience. Email monetized it. When both are running, each one makes the other more effective. A subscriber who found you through search is already interested in what you sell. The email program captures that interest before it goes cold.
 
