@@ -10,7 +10,7 @@ A welcome email that goes out once. A promotional blast when they need a sales s
 
 I know this because the specialty retailer I was running marketing for looked exactly like this. Mailchimp configured by late 2022. Sitting mostly unused while I focused on building SEO and content.
 
-Email launched properly in July 2025. By the time I'm writing this, it has generated $453,309 in attributed revenue. Klaviyo puts the account in the top 10% of operators on the platform.
+Email launched properly in July 2025. In six months, it generated $453,309 in attributed revenue. Klaviyo puts the account in the top 10% of operators on the platform.
 
 Here's what changed.
 
