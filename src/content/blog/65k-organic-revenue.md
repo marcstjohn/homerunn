@@ -1,6 +1,6 @@
 ---
-title: "$80K a Month From Organic Search. This Is What the Content Strategy Looked Like."
-description: "How I built a content system that grew organic keywords from 9,000 to 40,000+ and consistently generated over $80,000 a month in revenue."
+title: "$70K a Month From Organic Search. This Is What the Content Strategy Looked Like."
+description: "How I built a content system that grew organic keywords from 9,000 to 40,000+ and consistently generates $65K-$70K a month in revenue, with peaks near $80K."
 date: 2026-05-25
 ---
 
@@ -8,7 +8,7 @@ When I joined the specialty retailer I was running marketing for, the site had f
 
 Organic traffic existed. But it wasn't doing any real work to earn revenue.
 
-Four years later, organic search was consistently generating over $80,000 a month in revenue. Organic keywords grew from 9,000 to over 40,000 at one point. One of those articles was cited in a Forbes piece with 200,000+ views.
+Four years later, organic search was consistently generating $65,000-$70,000 a month in revenue, with peaks as high as $80,000 at its best. Organic keywords grew from 9,000 to over 40,000 at one point. One of those articles was cited in a Forbes piece with 200,000+ views.
 
 Here's what actually built that.
 
@@ -64,7 +64,7 @@ When someone is comparing two products and your article shows up with the honest
 
 That trust shows up in the numbers. Buyers who arrived through organic content converted at higher rates. They had higher average order values. They were easier to close because the content had already answered their objections.
 
-The $80K in monthly organic revenue wasn't from traffic volume alone. It came from buyers who arrived already knowing what they wanted.
+The $65K-$70K in monthly organic revenue wasn't from traffic volume alone. It came from buyers who arrived already knowing what they wanted.
 
 ---
 
