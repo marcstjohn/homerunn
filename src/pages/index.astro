@@ -284,10 +284,14 @@ import Logo from '../components/Logo.astro';
             q: 'What does the first 90 days look like?',
             a: "The first month is mostly diagnostic. I look at everything — analytics, email, site, ads, existing content — and figure out where the biggest gaps are. Almost always, a content strategy is the first thing we build. It's the backbone everything else runs on. By month two something is built and running. By month three the system is taking shape and we're measuring what's working.",
           },
+          {
+            q: "Isn't AI making SEO pointless?",
+            a: 'No, but it\'s not the same game either. Ranking still matters, but getting cited inside an AI answer is now part of the job too, and that takes different content: clear answers up front, defined terms, real numbers a model can quote. I\'m already seeing sites I run get cited in ChatGPT and Google\'s AI Overview while still sitting on page two, not page one. I wrote up exactly what that looks like and what to do about it <a href="/blog/search-demand-plateau" class="text-[#D97706] underline">here</a>.',
+          },
         ].map(({ q, a }) => (
           <div class="border-b border-[#E5E5E5] pb-10">
             <p class="font-sora font-semibold text-xl text-[#111111] mb-3">{q}</p>
-            <p class="font-inter text-[#6B7280] text-base leading-relaxed">{a}</p>
+            <p class="font-inter text-[#6B7280] text-base leading-relaxed" set:html={a} />
           </div>
         ))}
       </div>
