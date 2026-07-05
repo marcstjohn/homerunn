@@ -14,7 +14,7 @@ import Logo from '../components/Logo.astro';
       <a href="/"><Logo color="amber" width={120} /></a>
       <a
         href="#contact"
-        class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-sm px-5 py-2.5 rounded transition-colors"
+        class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-sm px-5 py-2.5 rounded-[2px] transition-colors"
       >
         Let's talk
       </a>
@@ -22,12 +22,12 @@ import Logo from '../components/Logo.astro';
   </header>
 
   <!-- HERO -->
-  <section class="bg-[#111111] diamond-texture pt-40 pb-24 px-6">
+  <section class="bg-[#111111] diamond-texture pt-48 pb-32 px-6">
     <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-6">
+      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-6">
         For ecommerce brands doing $100K–$3M in revenue
       </p>
-      <h1 class="font-sora font-bold text-5xl md:text-6xl text-white leading-tight mb-6">
+      <h1 class="font-sora font-bold text-[clamp(2.75rem,5.5vw,4.5rem)] text-white leading-[1.08] tracking-[-0.02em] mb-6">
         The best marketing educates and connects. Most brands do one. Few do both.
       </h1>
       <p class="font-inter text-[#6B7280] text-xl leading-relaxed mb-6 max-w-[620px]">
@@ -45,17 +45,17 @@ import Logo from '../components/Logo.astro';
       </div>
       <a
         href="#contact"
-        class="inline-block bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded transition-colors"
+        class="arrow-link inline-block bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors"
       >
-        Start the Conversation
+        Start the Conversation <span class="arrow">&rarr;</span>
       </a>
     </div>
   </section>
 
   <!-- THE PROBLEM -->
   <section class="bg-white py-28 px-6">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">The problem</p>
+    <div class="max-w-[760px] mx-auto" data-reveal>
+      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">The problem</p>
       <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-8">Most Brands Have Marketing. Few Have a System.</h2>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
         The content exists. There's a product page, maybe some articles, an email list that gets used occasionally. Each piece does something. None of it adds up.
@@ -87,8 +87,8 @@ import Logo from '../components/Logo.astro';
 
   <!-- THE FIX -->
   <section class="bg-[#111111] diamond-texture py-28 px-6">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">The fix</p>
+    <div class="max-w-[760px] mx-auto" data-reveal>
+      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">The fix</p>
       <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-8">Running Channels Is Not the Same as Having a System.</h2>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
         The difference is whether everything is working toward the same thing.
@@ -109,11 +109,11 @@ import Logo from '../components/Logo.astro';
   <section id="services" class="bg-[#F7F7F7] py-28 px-6">
     <div class="max-w-[1100px] mx-auto">
       <div class="max-w-[760px] mb-16">
-        <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">What you get</p>
+        <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">What you get</p>
         <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-4">Full-Stack Growth Marketing. One Operator Running the System.</h2>
         <p class="font-inter text-[#6B7280] text-lg leading-relaxed">These aren't separate services. They're the parts of one system, built to connect and compound.</p>
       </div>
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-8" data-reveal>
         {[
           {
             title: 'Content Strategy & CRO',
@@ -146,7 +146,7 @@ import Logo from '../components/Logo.astro';
             proof: '',
           },
         ].map(({ title, body, proof }) => (
-          <div class="bg-white border border-[#E5E5E5] rounded-lg p-8">
+          <div class="bg-white border border-[#E5E5E5] rounded-[2px] p-8">
             <p class="font-sora font-semibold text-lg text-[#111111] mb-3">{title}</p>
             <p class="font-inter text-[#6B7280] text-base leading-relaxed mb-3">{body}</p>
             {proof && <p class="font-inter text-[#D97706] text-sm font-semibold">{proof}</p>}
@@ -157,16 +157,16 @@ import Logo from '../components/Logo.astro';
   </section>
 
   <!-- THE NUMBERS -->
-  <section class="bg-[#111111] diamond-texture py-28 px-6">
+  <section class="bg-[#111111] diamond-texture py-36 px-6">
     <div class="max-w-[1100px] mx-auto">
       <div class="max-w-[760px] mb-16">
-        <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">The numbers</p>
+        <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">The numbers</p>
         <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-4">Results I Can Show You</h2>
         <p class="font-inter text-[#6B7280] text-lg leading-relaxed">
           The average ecommerce brand grows around 8–9% a year. What you see below came from running every channel for a specialty ecommerce retailer — work I'm still doing today. The growth is in the method.
         </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#1F1F1F]">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#1F1F1F]" data-reveal>
         {[
           { stat: '$2.7M', label: 'Annual revenue, up from $400K (575% growth)' },
           { stat: '$300K+', label: 'Single-month revenue milestone' },
@@ -175,8 +175,8 @@ import Logo from '../components/Logo.astro';
           { stat: '17%', label: 'AOV increase through CRO' },
           { stat: 'Forbes', label: 'Writing cited in a Forbes.com article (200K+ views)' },
         ].map(({ stat, label }) => (
-          <div class="bg-[#111111] p-8">
-            <p class="font-sora font-bold text-4xl text-[#D97706] mb-2">{stat}</p>
+          <div class="bg-[#111111] p-10">
+            <p class="stat-num font-sora font-bold text-[clamp(2.5rem,4.5vw,3.75rem)] tracking-[-0.02em] tabular-nums text-[#D97706] mb-2" data-stat={stat}>{stat}</p>
             <p class="font-inter text-[#6B7280] text-sm leading-snug">{label}</p>
           </div>
         ))}
@@ -194,9 +194,9 @@ import Logo from '../components/Logo.astro';
         The brands I work with are building something real. They have a product people actually want, a story worth telling, and usually someone who knows their customer better than any agency ever will. They just need the marketing to catch up. That's the work I'm here for.
       </p>
     </div>
-    <div class="max-w-[760px] mx-auto grid md:grid-cols-2 gap-12">
+    <div class="max-w-[760px] mx-auto grid md:grid-cols-2 gap-12" data-reveal>
       <div>
-        <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-6">This is for you if...</p>
+        <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-6">This is for you if...</p>
         <ul class="space-y-4">
           {[
             'You run an ecommerce brand doing $100K–$3M and marketing is holding you back',
@@ -213,7 +213,7 @@ import Logo from '../components/Logo.astro';
         </ul>
       </div>
       <div>
-        <p class="font-inter text-[#6B7280] font-semibold text-sm uppercase tracking-widest mb-6">This probably isn't for you if...</p>
+        <p class="font-inter text-[#6B7280] font-semibold text-xs uppercase tracking-[0.22em] mb-6">This probably isn't for you if...</p>
         <ul class="space-y-4">
           {[
             "You need someone to manage a team of marketers (I'm the operator, not the manager)",
@@ -234,7 +234,7 @@ import Logo from '../components/Logo.astro';
   <!-- HOW TO START -->
   <section class="bg-[#F7F7F7] py-28 px-6 border-t border-[#E5E5E5]">
     <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">How to start</p>
+      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">How to start</p>
       <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-12">Here's How This Works</h2>
       <div class="space-y-8">
         {[
@@ -256,7 +256,7 @@ import Logo from '../components/Logo.astro';
   <!-- FAQ -->
   <section class="bg-white py-28 px-6 border-t border-[#E5E5E5]">
     <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">Common questions</p>
+      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">Common questions</p>
       <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-12">Probably wondering...</h2>
       <div class="space-y-10">
         {[
@@ -301,7 +301,7 @@ import Logo from '../components/Logo.astro';
   <!-- ABOUT -->
   <section id="about" class="bg-[#F7F7F7] py-28 px-6 border-t border-[#E5E5E5]">
     <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">About</p>
+      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">About</p>
       <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-8">Who's Behind This</h2>
       <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
         I'm Marc St. John, a marketer and writer based in Columbus, Ohio.
@@ -321,7 +321,7 @@ import Logo from '../components/Logo.astro';
   <!-- CONTACT -->
   <section id="contact" class="bg-[#111111] diamond-texture py-28 px-6">
     <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">Get in touch</p>
+      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">Get in touch</p>
       <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-4">
         Ready to build marketing that compounds?
       </h2>
@@ -334,13 +334,13 @@ import Logo from '../components/Logo.astro';
           <div>
             <label for="name" class="block font-inter text-[#6B7280] text-sm mb-2">Your name</label>
             <input id="name" name="name" type="text" required
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded focus:outline-none focus:border-[#D97706] transition-colors"
+              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
               placeholder="Jane Smith" />
           </div>
           <div>
             <label for="business" class="block font-inter text-[#6B7280] text-sm mb-2">Business name</label>
             <input id="business" name="business" type="text"
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded focus:outline-none focus:border-[#D97706] transition-colors"
+              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
               placeholder="Your Brand" />
           </div>
         </div>
@@ -348,24 +348,24 @@ import Logo from '../components/Logo.astro';
           <div>
             <label for="website" class="block font-inter text-[#6B7280] text-sm mb-2">Website URL</label>
             <input id="website" name="website" type="text"
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded focus:outline-none focus:border-[#D97706] transition-colors"
+              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
               placeholder="https://yourbrand.com" />
           </div>
           <div>
             <label for="email" class="block font-inter text-[#6B7280] text-sm mb-2">Email address</label>
             <input id="email" name="email" type="email" required
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded focus:outline-none focus:border-[#D97706] transition-colors"
+              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
               placeholder="your@email.com" />
           </div>
         </div>
         <div>
           <label for="message" class="block font-inter text-[#6B7280] text-sm mb-2">What's your biggest marketing challenge right now?</label>
           <textarea id="message" name="message" rows="5" required
-            class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded focus:outline-none focus:border-[#D97706] transition-colors resize-none"
+            class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors resize-none"
             placeholder="Tell me where you are. Revenue, channels you're running, what's not moving..."></textarea>
         </div>
         <button type="submit"
-          class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded transition-colors">
+          class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors">
           Let's Talk
         </button>
       </form>
@@ -380,5 +380,60 @@ import Logo from '../components/Logo.astro';
       <a href="/blog" class="font-inter text-[#6B7280] hover:text-white text-sm transition-colors">Blog</a>
     </div>
   </footer>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            revealObserver.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.15 }
+    );
+    revealEls.forEach((el) => revealObserver.observe(el));
+
+    // Count-up on the big stats
+    function countUp(el: Element) {
+      const raw = el.getAttribute('data-stat') || '';
+      const match = raw.match(/^([^0-9]*)([\d,.]+)(.*)$/);
+      if (!match) return; // non-numeric (e.g. "Forbes") stays as-is
+      const [, prefix, numStr, suffix] = match;
+      const target = parseFloat(numStr.replace(/,/g, ''));
+      const decimals = (numStr.split('.')[1] || '').length;
+      const useCommas = numStr.includes(',');
+      const duration = 1200;
+      const start = performance.now();
+      function frame(now: number) {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        let val = (target * eased).toFixed(decimals);
+        if (useCommas) val = Number(val).toLocaleString('en-US', { minimumFractionDigits: decimals });
+        el.textContent = prefix + val + suffix;
+        if (t < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion) {
+      const statObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              countUp(entry.target);
+              statObserver.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.5 }
+      );
+      document.querySelectorAll('.stat-num').forEach((el) => statObserver.observe(el));
+    }
+  </script>
 
 </Layout>

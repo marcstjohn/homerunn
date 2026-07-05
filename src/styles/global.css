@@ -13,6 +13,8 @@
 
 .diamond-texture {
   position: relative;
+  /* Subtle atmosphere: center-top glow instead of flat void */
+  background: radial-gradient(ellipse 120% 80% at 30% 0%, #181818 0%, #111111 60%);
 }
 .diamond-texture::before {
   content: '';
@@ -23,6 +25,44 @@
   -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 58%);
   mask-image: linear-gradient(to bottom, black 0%, transparent 58%);
   pointer-events: none;
+}
+/* Signature: amber hairline across the top of every dark section */
+.diamond-texture::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(217, 119, 6, 0.55) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Scroll reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-reveal].in-view {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Micro-signature: arrows nudge right on hover */
+.arrow-link .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.arrow-link:hover .arrow {
+  transform: translateX(4px);
 }
 
 @layer base {
@@ -39,5 +79,10 @@
 
   h1, h2, h3, h4 {
     font-family: 'Sora', sans-serif;
+  }
+
+  ::selection {
+    background-color: #D97706;
+    color: #111111;
   }
 }
