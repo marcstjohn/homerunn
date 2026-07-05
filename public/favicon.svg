@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#D97706"/>
-  <text x="32" y="47" font-family="'Sora', Georgia, serif" font-weight="700" font-size="42" fill="#FFFFFF" text-anchor="middle">h</text>
+<rect width="64" height="64" rx="14" fill="#D97706"/>
+<g transform="translate(17.35 48.06)" fill="#FFFFFF">
+<path d="M10.91 0L2.90 0L2.90-32.12L10.91-32.12L10.91-13.82L9.86-13.82Q9.86-17.51 10.78-20.02Q11.70-22.53 13.49-23.80Q15.27-25.08 17.91-25.08L18.26-25.08Q22.22-25.08 24.31-22.22Q26.40-19.36 26.40-13.82L26.40 0L18.39 0L18.39-14.12Q18.39-15.80 17.38-16.87Q16.37-17.95 14.70-17.95Q13.02-17.95 11.97-16.87Q10.91-15.80 10.91-14.04"/>
+</g>
 </svg>
