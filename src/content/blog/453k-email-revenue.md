@@ -1,12 +1,12 @@
 ---
-title: "$453K From Email. This Is How It Happened."
-description: "How I built a Klaviyo email program from zero to $453K in attributed revenue: the flows, the campaigns, and what it actually required."
+title: "1,367 Orders From Email. This Is How It Happened."
+description: "How I built a Klaviyo email program from an abandoned account into 1,367 orders in six months: the flows, the campaigns, and what it actually required."
 date: 2026-05-24
 ---
 
-Email launched properly in July 2025. In six months, it generated $453,309 in attributed revenue. Klaviyo puts the account in the top 10% of operators on the platform.
+The specialty retailer I was running marketing for had Mailchimp configured since late 2022. It sat mostly unused while I focused on SEO and content.
 
-The specialty retailer I was running marketing for had Mailchimp configured since late 2022. It sat mostly unused while I focused on SEO and content. Here's what changed.
+Once the flows and campaigns were properly built, six months of automated sends drove 1,367 orders, converting nearly 2% of everyone who received one — a strong rate for automated email. Here's what changed.
 
 ---
 
@@ -14,7 +14,7 @@ The specialty retailer I was running marketing for had Mailchimp configured sinc
 
 Email is not a broadcast channel. You do not just send things to people.
 
-A real email program is a set of automated systems that respond to customer behavior, plus a campaign calendar that teaches and sells in a rhythm. When those two things are in place, email becomes the most profitable channel you have. It keeps paying you after you stop spending money on it.
+A real email program is a set of automated systems that respond to customer behavior, plus a campaign calendar that teaches and sells in a rhythm. When those two things are in place, email becomes one of the most efficient channels you have. It keeps paying you after you stop spending money on it.
 
 The system was missing.
 
@@ -22,7 +22,7 @@ The system was missing.
 
 ## What a real email system looks like
 
-**Flows first.** This is where most of the revenue sits.
+**Flows first.** This is where most of the orders come from.
 
 **Welcome series.** The first email a new subscriber gets matters more than any campaign you'll ever send.
 
@@ -44,7 +44,7 @@ Later emails in the sequence cross-sell related products. A customer who just bo
 
 **Campaigns second.** Once flows are running, campaigns are fuel.
 
-The pattern that worked: write a useful email about a product or topic, link to the related blog post or product page, send to the engaged segment. One product-focused campaign contributed to $6,200 in attributed revenue from a single send. Another drove thousands in sales the same week.
+The pattern that worked: write a useful email about a product or topic, link to the related blog post or product page, send to the engaged segment. Product-focused campaigns consistently outperformed generic promotional blasts.
 
 I also built a send calendar. Not blasts whenever there's a sale. A real schedule: new arrivals, seasonal content, educational pieces, product spotlights. Consistency builds the habit of opening.
 
@@ -58,7 +58,7 @@ There was an existing list — imported years earlier, never properly maintained
 
 The list grew from three places: an on-site pop-up offering something useful in exchange for an email, organic search traffic landing on content and signing up, and Meta ads bringing new people into the funnel.
 
-SEO and email are not separate channels. SEO built the audience. Email monetized it. When both are running, each one makes the other more effective. A subscriber who found you through search is already interested in what you sell. The email program captures that interest before it goes cold.
+SEO and email are not separate channels. SEO built the audience. Email converted it. When both are running, each one makes the other more effective. A subscriber who found you through search is already interested in what you sell. The email program captures that interest before it goes cold.
 
 Most email guides skip this entirely. They treat email like it exists in isolation.
 
@@ -72,11 +72,9 @@ A customer who bought last month is not the same as someone who visited once and
 
 The segments that mattered most were built around recency and behavior: how recently someone visited, what they looked at, whether they bought. Different segments get different messages at different frequencies.
 
-I moved from no segmentation to proper segmentation in July 2025. The revenue curve follows that timeline almost exactly.
-
 ---
 
-## What $453K actually required
+## What 1,367 orders actually required
 
 Six months. Systems built properly the first time and maintained from there.
 
