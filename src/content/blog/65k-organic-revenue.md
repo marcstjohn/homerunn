@@ -1,6 +1,6 @@
 ---
-title: "40,000+ Keywords From Organic Search. This Is What the Content Strategy Looked Like."
-description: "How I built a content system that grew organic keywords from a few thousand to 40,000+ worldwide, and got cited in Forbes along the way."
+title: "43,000+ Keywords From Organic Search. This Is What the Content Strategy Looked Like."
+description: "How I built a content system that grew organic keywords from a few thousand to 43,000+ worldwide, and got cited in Forbes along the way."
 date: 2026-05-25
 ---
 
@@ -8,7 +8,7 @@ When I joined the specialty retailer I was running marketing for, the site had f
 
 Organic traffic existed. But it wasn't doing any real work to earn trust or revenue.
 
-Since then, organic search has grown to rank for 40,000+ keywords, worldwide. One of those articles was cited in a Forbes piece with 200,000+ views.
+Since then, organic search has grown to 43,000+ keywords at its high point, worldwide. One of those articles was cited in a Forbes piece with 200,000+ views.
 
 Here's what actually built that.
 
@@ -50,9 +50,9 @@ One blog post per month was where it started. Before AI came around, that's wher
 
 The brands that win keywords and LLM citations build depth across a topic. Not 12 articles a year. More like 40, 60, 100. Each one answers a specific question. Each one earns a keyword cluster. Together they signal to search engines that this site is the authority on the topic.
 
-I brought in freelance writers and edited every article before it went live. The standard was the same regardless of who wrote it: real information, honest recommendations, specific products, and nothing that reads like it was written to rank rather than to help.
+I hired one writer and edited her work closely, article by article. She had a big impact on what the site became. The standard never changed: real information, honest recommendations, specific products, and nothing that reads like it was written to rank rather than to help.
 
-By the time the organic engine was fully running, the site had over 100 published articles and hundreds of optimized product descriptions. That body of work did the lion's share of moving the keyword count past 40,000.
+By the time the organic engine was fully running, the site had over 100 published articles and hundreds of optimized product descriptions. That body of work did the lion's share of moving the keyword count past 43,000.
 
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: "1,367 Orders From Email. This Is How It Happened."
-description: "How I built a Klaviyo email program from an abandoned account into 1,367 orders in six months: the flows, the campaigns, and what it actually required."
+title: "$903K From Email Flows. This Is How It Happened."
+description: "How I built a Klaviyo email program from an abandoned account into $903K+ in revenue and 2,442 orders since launch: the flows, the campaigns, and what it actually required."
 date: 2026-05-24
 ---
 
 The specialty retailer I was running marketing for had Mailchimp configured since late 2022. It sat mostly unused while I focused on SEO and content.
 
-Once the flows and campaigns were properly built, six months of automated sends drove 1,367 orders, converting nearly 2% of everyone who received one — a strong rate for automated email. Here's what changed.
+Once the flows and campaigns were properly built, automated sends have driven $903K+ in revenue and 2,442 orders since launching in June 2025, converting about 1.8% of everyone who received one — a strong rate for automated email. Here's what changed.
 
 ---
 
@@ -24,7 +24,7 @@ The system was missing.
 
 **Flows first.** This is where most of the orders come from.
 
-**Welcome series.** The first email a new subscriber gets matters more than any campaign you'll ever send.
+**Welcome series.** The first email a new subscriber gets matters more than any campaign you will ever send.
 
 Most brands send a discount code and stop there. A real welcome sequence does more than that. It tells the brand story, earns trust, and gives the subscriber a reason to stay engaged before they've spent a dollar. The goal is not just a first purchase. It's to make them feel like they made the right call signing up.
 
@@ -74,9 +74,9 @@ The segments that mattered most were built around recency and behavior: how rece
 
 ---
 
-## What 1,367 orders actually required
+## What $903K in email revenue actually required
 
-Six months. Systems built properly the first time and maintained from there.
+About a year. Systems built properly the first time and maintained from there.
 
 The flows took a few weeks to build out. The campaign calendar took discipline to keep up. The segmentation took time to define and test.
 
