@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>homerunn — Under Construction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#111111;
+    --amber:#D97706;
+    --white:#FFFFFF;
+    --offwhite:#F7F7F7;
+    --muted:#6B7280;
+    --border:#E5E5E5;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    display:flex;
+    flex-direction:column;
+    min-height:100%;
+  }
+
+  .wrap{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:56px 24px;
+  }
+  .col{
+    width:100%;
+    max-width:560px;
+    animation:rise .75s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+  /* ascending wordmark: 30 -> 60px, compounding into the double-n */
+  .mark{
+    display:flex;
+    align-items:baseline;
+    gap:.5px;
+    color:var(--amber);
+    font-family:'Sora',system-ui,sans-serif;
+    line-height:1;
+    margin-bottom:44px;
+    user-select:none;
+  }
+  .mark span{display:inline-block;animation:pop .6s cubic-bezier(.2,.8,.3,1) both}
+  .mark .s{font-weight:800}
+  .mark .l{font-weight:700}
+  .m1{font-size:30px;animation-delay:.05s}
+  .m2{font-size:33px;animation-delay:.10s}
+  .m3{font-size:36.5px;animation-delay:.15s}
+  .m4{font-size:40.5px;animation-delay:.20s}
+  .m5{font-size:45px;animation-delay:.25s}
+  .m6{font-size:49.5px;animation-delay:.30s}
+  .m7{font-size:54.5px;animation-delay:.35s}
+  .m8{font-size:60px;animation-delay:.40s}
+  @keyframes pop{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+
+  .eyebrow{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin:0 0 18px;
+  }
+
+  h1{
+    font-family:'Sora',system-ui,sans-serif;
+    font-weight:700;
+    font-size:clamp(30px,5.6vw,44px);
+    line-height:1.14;
+    letter-spacing:-.022em;
+    margin:0 0 20px;
+  }
+
+  .lede{
+    font-size:17px;
+    color:var(--muted);
+    margin:0 0 40px;
+    max-width:46ch;
+  }
+  .lede strong{color:var(--ink);font-weight:600}
+
+  .divider{height:1px;background:var(--border);margin:0 0 28px}
+
+  .rows{display:grid;gap:14px}
+  .row{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    font-size:14.5px;
+  }
+  .row .k{
+    flex:0 0 96px;
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .row .v{color:var(--ink);font-weight:500}
+  .dot{
+    display:inline-block;
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--amber);
+    margin-right:9px;
+    vertical-align:middle;
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  footer{
+    border-top:1px solid var(--border);
+    background:var(--offwhite);
+    padding:20px 24px;
+    text-align:center;
+    font-size:13px;
+    color:var(--muted);
+  }
+  footer b{color:var(--ink);font-weight:600}
+
+  @media (max-width:520px){
+    .wrap{padding:40px 20px}
+    .m1{font-size:24px}.m2{font-size:26.5px}.m3{font-size:29px}.m4{font-size:32px}
+    .m5{font-size:35.5px}.m6{font-size:39px}.m7{font-size:43px}.m8{font-size:47px}
+    .mark{margin-bottom:34px}
+    .row{flex-direction:column;gap:2px}
+    .row .k{flex:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="col">
+      <div class="mark" role="img" aria-label="homerunn">
+        <span class="s m1">h</span><span class="s m2">o</span><span class="s m3">m</span><span class="l m4">e</span><span class="l m5">r</span><span class="l m6">u</span><span class="l m7">n</span><span class="l m8">n</span>
+      </div>
+
+      <p class="eyebrow">Temporarily under construction</p>
+
+      <h1>Demo content is coming.</h1>
+
+      <p class="lede">
+        homerunn is offline while I build a demo store.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="rows">
+        <div class="row">
+          <div class="k">Status</div>
+          <div class="v"><span class="dot"></span>In progress</div>
+        </div>
+        <div class="row">
+          <div class="k">Now building</div>
+          <div class="v">Demo content &mdash; build log to follow.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <b>homerunn</b> &nbsp;&middot;&nbsp; Columbus, Ohio
+  </footer>
+</body>
+</html>

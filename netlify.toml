@@ -1,3 +1,13 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# --- TEMPORARY: under-construction takeover -------------------------------
+# Every request serves public/construction.html. The real site is untouched
+# in src/pages and returns the moment this block is deleted and redeployed.
+[[redirects]]
+  from = "/*"
+  to = "/construction.html"
+  status = 302
+  force = true
+# --------------------------------------------------------------------------
