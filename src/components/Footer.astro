@@ -1,0 +1,38 @@
+---
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-[#0B0B0B] border-t border-[#1F1F1F] px-6 pt-16 pb-10">
+  <div class="max-w-[1180px] mx-auto">
+    <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr] pb-12 border-b border-[#1F1F1F]">
+      <div>
+        <a href="/" aria-label="homerunn home"><Logo color="amber" width={140} /></a>
+        <p class="font-inter text-[#8A8A8A] text-[15px] leading-relaxed mt-5 max-w-[340px]">
+          Full-stack growth marketing for ecommerce brands. One operator running SEO, email, ads, and content as one system.
+        </p>
+      </div>
+      <div>
+        <p class="eyebrow mb-4">On this site</p>
+        <ul class="space-y-2.5 font-inter text-[15px]">
+          <li><a href="/#results" class="text-[#A3A3A3] hover:text-white transition-colors">Results</a></li>
+          <li><a href="/#services" class="text-[#A3A3A3] hover:text-white transition-colors">Services</a></li>
+          <li><a href="/#process" class="text-[#A3A3A3] hover:text-white transition-colors">How it works</a></li>
+          <li><a href="/#about" class="text-[#A3A3A3] hover:text-white transition-colors">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow mb-4">Read</p>
+        <ul class="space-y-2.5 font-inter text-[15px]">
+          <li><a href="/case-study" class="text-[#A3A3A3] hover:text-white transition-colors">The case study</a></li>
+          <li><a href="/blog" class="text-[#A3A3A3] hover:text-white transition-colors">The blog</a></li>
+          <li><a href="/#contact" class="text-[#A3A3A3] hover:text-white transition-colors">Start a conversation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-inter text-[13px] text-[#6B7280]">
+      <p>&copy; {year} homerunn. Columbus, Ohio.</p>
+      <p>Run by Marc St. John. No account managers, no handoffs.</p>
+    </div>
+  </div>
+</footer>

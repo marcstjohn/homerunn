@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import GrowthChart from '../components/GrowthChart.astro';
+
+// Every figure here is from the July 2026 verified set (homerunn brain,
+// business.md "The hard facts"). Client, agency, and design studio stay
+// unnamed on purpose: naming a small vendor would lead a reader to the client.
+
+const headline = [
+  { stat: '1,000%+', label: 'Annual revenue growth, 2020 to 2025' },
+  { stat: '$903K+', label: 'Revenue from email flows since June 2025' },
+  { stat: '43,000+', label: 'Organic keywords reached, worldwide' },
+  { stat: '7x', label: 'Meta ad spend scaled, profitable throughout' },
+];
+
+const built = [
+  {
+    title: 'Website rebuild',
+    body: [
+      "I led a full rebuild of the site, working with a design studio on the visual side. I owned content, product and category structure, and UX decisions, and coordinated the build from staging through launch. The agency's UX testing fed into those decisions with real user data instead of guesses.",
+      "The redesign was a major part of the growth story here, not a side note. A site that presents better converts better, and every channel below sends traffic to pages that now hold up once people land on them.",
+    ],
+  },
+  {
+    title: 'SEO & content',
+    body: [
+      "I built the content and technical SEO strategy from the ground up, and wrote or edited nearly all of it myself. Comparison guides, buying guides, how-to content, all written to actually answer a buyer's question, not to hit a keyword count.",
+      'The agency advised and reported through this stretch, and their input helped. The work that moved the rankings, the writing and the on-site changes, was done in house. I hired one writer along the way and edited her work closely, article by article. She had a big impact on what the site became.',
+      "That approach is also why one of those articles was cited in a Forbes.com article with 200,000+ views. Organic keywords reached 43,000+, up from a small fraction of that when I started. That number still fluctuates. It's traffic that converts, because the content was built around what the business actually sells.",
+    ],
+  },
+  {
+    title: 'Email (Klaviyo)',
+    body: [
+      'I built the flow program from zero: welcome series, cart abandonment, browse abandonment, post-purchase, win-back. Since launching in June 2025, those automated flows have driven $903K+ in revenue and 2,442 orders. That\'s roughly 1.8% of everyone who received one converting to a sale, a strong rate for fully automated email.',
+      "It's now one of the most reliable channels in the whole system. It runs without anyone touching it day to day.",
+    ],
+  },
+  {
+    title: 'Meta ads',
+    body: [
+      'I took paid social from a standing start to a real, profitable channel. Spend has scaled 7x since launch, from roughly $770 a month to $5,400–$5,600 a month, and stayed profitable the entire way.',
+      "I'd rather report that honestly than hand you a single flashy ROAS number. At this spend level, one order can swing a daily ratio hard. The real story is sustained, profitable scale, not a headline multiple.",
+    ],
+  },
+  {
+    title: 'Conversion',
+    body: [
+      'I rebuilt product pages, landing pages, and on-site content to turn the traffic already coming in into actual orders. Average order value grew 53% over the period, from $180.51 to $275.73, while order volume grew right alongside it, not at its expense.',
+    ],
+  },
+];
+
+const numbers = [
+  { metric: 'Annual revenue (total sales)', before: '$244,794 (2020)', now: '$2,703,472 (2025)', change: '+1,004%' },
+  { metric: 'Average order value', before: '$180.51 (2021)', now: '$275.73 (2025)', change: '+53%' },
+  { metric: 'Meta ad spend (monthly)', before: '~$770 (at launch)', now: '$5,400–$5,600', change: '7x, profitable' },
+  { metric: 'Organic keywords', before: 'A fraction of today', now: '43,000+ reached', change: 'Fluctuates' },
+];
+
+const email = [
+  { k: 'Revenue', v: '$903,814.77' },
+  { k: 'Orders', v: '2,442' },
+  { k: 'Recipients', v: '137,354' },
+  { k: 'Conversion rate', v: '1.8%' },
+];
+---
+
+<Layout
+  title="Case study: 1,000%+ growth for a specialty ecommerce retailer — homerunn"
+  description="How one operator ran SEO, email, Meta ads, content, and conversion as one system for a specialty ecommerce retailer: revenue up more than 1,000% from 2020 to 2025."
+  noindex
+>
+
+  <Header />
+
+  <!-- HERO -->
+  <section class="bg-[#111111] diamond-texture pt-36 md:pt-44 pb-20 md:pb-28 px-6 overflow-hidden">
+    <div class="relative max-w-[1180px] mx-auto grid lg:grid-cols-[1.12fr_1fr] gap-14 lg:gap-16 items-center">
+      <div class="hero-in">
+        <p class="eyebrow eyebrow-rule mb-7">Case study · Specialty ecommerce retailer</p>
+        <h1 class="font-sora font-bold text-[clamp(2.4rem,4.4vw,3.6rem)] text-white leading-[1.06] tracking-[-0.025em] mb-7">
+          More Than 1,000% Growth. <span class="text-[#D97706]">One Operator, Full Stack.</span>
+        </h1>
+        <p class="font-inter text-[#A3A3A3] text-[19px] leading-relaxed mb-5 max-w-[580px]">
+          Since October 2021, I've run the marketing system for a specialty ecommerce retailer. SEO, email, Meta ads, content, and conversion, all at once.
+        </p>
+        <p class="font-inter text-[#A3A3A3] text-[19px] leading-relaxed max-w-[580px]">
+          I didn't do it alone, and I won't pretend I did. An outside agency gave guidance and strong reporting throughout, and ran UX tests that sharpened the site. The lion's share of the rankings and the progress happened in house.
+        </p>
+      </div>
+      <div class="hero-in">
+        <GrowthChart />
+      </div>
+    </div>
+  </section>
+
+  <!-- HEADLINE NUMBERS -->
+  <section class="bg-[#0B0B0B] border-t border-[#1F1F1F] px-6">
+    <div class="max-w-[1180px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#232323] border-x border-[#232323]">
+      {headline.map(({ stat, label }) => (
+        <div class="bg-[#0B0B0B] px-6 py-9 md:px-8">
+          <p class="font-sora font-bold text-[clamp(2.1rem,3.6vw,3rem)] leading-none tracking-[-0.03em] text-[#D97706] mb-3">{stat}</p>
+          <p class="font-inter text-[#A3A3A3] text-[14px] leading-snug">{label}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- STARTING POINT -->
+  <section class="bg-white py-24 md:py-28 px-6">
+    <div class="max-w-[1180px] mx-auto grid lg:grid-cols-[1fr_1.6fr] gap-10 lg:gap-20">
+      <div>
+        <p class="eyebrow mb-4">The starting point</p>
+        <h2 class="font-sora font-bold text-[clamp(1.9rem,3vw,2.6rem)] text-[#111111] leading-[1.1] tracking-[-0.02em]">Growth Was Happening. Nothing Was Compounding.</h2>
+      </div>
+      <div class="font-inter text-lg leading-relaxed text-[#4B5563] space-y-5">
+        <p class="text-[#111111] text-xl">A real physical-goods business, with real seasonality and real returns. There was no dedicated marketing hire before me.</p>
+        <p>I started as an SEO writer. My title today is Content Manager. What follows is what the role became in practice once I started building the channels the business didn't have.</p>
+        <p>There was no structured email program. No consistent content engine. No connected system tying search, email, and paid together. Growth was happening, just slower, and nothing was compounding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I BUILT -->
+  <section class="bg-[#F7F7F7] py-24 md:py-28 px-6 border-t border-[#E5E5E5]">
+    <div class="max-w-[1180px] mx-auto">
+      <div class="max-w-[760px] mb-14">
+        <p class="eyebrow mb-4">What I built</p>
+        <h2 class="font-sora font-bold text-[clamp(1.9rem,3vw,2.6rem)] text-[#111111] leading-[1.1] tracking-[-0.02em]">Five Channels, Built to Feed Each Other</h2>
+      </div>
+      <div class="border-t border-[#E0E0E0]">
+        {built.map(({ title, body }, i) => (
+          <div class="grid lg:grid-cols-[1fr_1.6fr] gap-4 lg:gap-20 py-10 border-b border-[#E0E0E0]">
+            <div class="flex items-baseline gap-4">
+              <span class="font-sora font-bold text-sm text-[#D97706] tracking-[0.08em]">{String(i + 1).padStart(2, '0')}</span>
+              <h3 class="font-sora font-semibold text-2xl text-[#111111] leading-snug">{title}</h3>
+            </div>
+            <div class="font-inter text-[17px] leading-relaxed text-[#4B5563] space-y-4">
+              {body.map((p) => <p>{p}</p>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- THE NUMBERS -->
+  <section class="bg-[#111111] diamond-texture py-24 md:py-28 px-6">
+    <div class="relative max-w-[1180px] mx-auto">
+      <p class="eyebrow mb-4">The numbers</p>
+      <h2 class="font-sora font-bold text-[clamp(1.9rem,3vw,2.6rem)] text-white leading-[1.1] tracking-[-0.02em] mb-12">Before and After</h2>
+
+      <div class="overflow-x-auto border border-[#262626] rounded-[2px] mb-10">
+        <table class="w-full min-w-[640px] font-inter text-[15px] text-left">
+          <thead>
+            <tr class="bg-[#161616] text-[#8A8A8A] text-[12px] uppercase tracking-[0.14em]">
+              <th class="font-semibold px-6 py-4">Metric</th>
+              <th class="font-semibold px-6 py-4">Before</th>
+              <th class="font-semibold px-6 py-4">Now</th>
+              <th class="font-semibold px-6 py-4">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            {numbers.map(({ metric, before, now, change }) => (
+              <tr class="border-t border-[#262626]">
+                <td class="px-6 py-5 text-white font-medium">{metric}</td>
+                <td class="px-6 py-5 text-[#A3A3A3] tabular-nums">{before}</td>
+                <td class="px-6 py-5 text-white tabular-nums">{now}</td>
+                <td class="px-6 py-5 text-[#D97706] font-semibold tabular-nums">{change}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="font-sora font-semibold text-white text-xl mb-5">Email flows, June 2025 launch through July 2026</p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#262626] border border-[#262626] rounded-[2px] overflow-hidden mb-8">
+        {email.map(({ k, v }) => (
+          <div class="bg-[#141414] p-6">
+            <p class="font-inter text-[12px] font-semibold uppercase tracking-[0.14em] text-[#8A8A8A] mb-2">{k}</p>
+            <p class="font-sora font-bold text-2xl md:text-[1.75rem] text-white tabular-nums tracking-[-0.01em]">{v}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="font-inter text-[#8A8A8A] text-[15px] leading-relaxed max-w-[760px]">
+        2020 is the last full year before I started in October 2021: the honest baseline, not a cherry-picked one. 2025 is the most recent complete year. Email flow figures run on a different clock: they cover the 13 months since Klaviyo launched in June 2025, not a single calendar year.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT THIS MEANS -->
+  <section class="bg-white py-24 md:py-28 px-6">
+    <div class="max-w-[1180px] mx-auto grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 items-center">
+      <div>
+        <p class="eyebrow mb-4">What this means for you</p>
+        <h2 class="font-sora font-bold text-[clamp(1.9rem,3vw,2.6rem)] text-[#111111] leading-[1.1] tracking-[-0.02em] mb-6">One Person Owning the Whole System.</h2>
+        <p class="font-inter text-lg leading-relaxed text-[#4B5563] mb-4">This is what happens when one person owns the whole system instead of one piece of it: email feeding search, search feeding ads, ads feeding a site built to close.</p>
+        <p class="font-inter text-lg leading-relaxed text-[#4B5563]">If your channels are running in silos and you're ready for someone to connect them, that's exactly what I do.</p>
+      </div>
+      <div class="bg-[#111111] rounded-[2px] p-8 md:p-10">
+        <p class="font-sora font-bold text-white text-2xl leading-snug mb-3">Want this running for your brand?</p>
+        <p class="font-inter text-[#A3A3A3] text-base leading-relaxed mb-7">Tell me where you are. I'll tell you what I'd fix first.</p>
+        <a href="/#contact" class="arrow-link inline-block bg-[#D97706] hover:bg-[#B45309] text-[#111111] font-inter font-semibold text-base px-7 py-4 rounded-[2px] transition-colors">
+          Start the Conversation <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+</Layout>

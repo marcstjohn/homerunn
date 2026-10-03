@@ -1,6 +1,110 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Logo from '../components/Logo.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import GrowthChart from '../components/GrowthChart.astro';
+import SystemDiagram from '../components/SystemDiagram.astro';
+
+const stats = [
+  { stat: '1,000%+', label: 'Revenue growth since I started, to $2.7M annual' },
+  { stat: '$903K+', label: 'Revenue from email flows since the June 2025 launch (2,442 orders)' },
+  { stat: '43,000+', label: 'Organic keywords reached, worldwide' },
+  { stat: '53%', label: 'Average order value increase since 2021' },
+  { stat: '$350K+', label: 'Single-month revenue milestone' },
+  { stat: 'Forbes', label: 'Writing cited in a Forbes.com article (200K+ views)' },
+];
+
+const services = [
+  {
+    title: 'Content Strategy & CRO',
+    body: 'The backbone of the system. Articles that build trust and rank, landing pages that convert, product pages that close. Content strategy determines whether everything else compounds.',
+    proof: '53% AOV increase since 2021',
+  },
+  {
+    title: 'SEO & Search Everywhere',
+    body: "Search isn't just Google anymore. Technical SEO, keyword targeting, and content built to surface wherever your buyers are looking: search engines, AI tools, YouTube, and beyond. Traffic that's already looking for what you sell.",
+    proof: '43,000+ organic keywords reached',
+  },
+  {
+    title: 'Email Marketing (Klaviyo)',
+    body: 'Full email programs built from zero. Flows, campaigns, segmentation, list growth. Email becomes a revenue channel, not a backlog item.',
+    proof: '$903K+ from flows since launch',
+  },
+  {
+    title: 'Website Development',
+    body: 'I lead the build and bring in a designer and developer to execute it. Brand story, page structure, product presentation. The website is the foundation everything else runs on.',
+    proof: '',
+  },
+  {
+    title: 'Meta Ads',
+    body: 'Campaign strategy, creative direction, audience building, retargeting. Connected to the rest of the system so every dollar works harder.',
+    proof: 'Spend scaled 7x, stayed profitable',
+  },
+  {
+    title: 'Strategy & Reporting',
+    body: "Clear attribution and honest reporting. You know what's working, what's not, and what to do next. No dashboards full of vanity metrics.",
+    proof: '',
+  },
+];
+
+const forYou = [
+  'You run an ecommerce brand doing $100K–$3M and marketing is holding you back',
+  "You've tried specialists or agencies and nothing connected",
+  'You want one person to own the system and make sure everything works together',
+  'Your email is underperforming or abandoned entirely',
+  "You know you're leaving money on the table but can't pinpoint where",
+];
+
+const notForYou = [
+  "You need someone to manage a team of marketers (I'm the operator, not the manager)",
+  "You're looking for a pure Google PPC specialist (I can connect you with one)",
+  "You're looking for the cheapest option",
+  'You need results in 30 days (this work compounds over months)',
+];
+
+const steps = [
+  { step: '01', title: 'Tell me where you are', text: "Fill out the form below. Tell me about your business and where you're stuck." },
+  { step: '02', title: 'I reply in 48 hours', text: "I'll review it and get back to you within 48 hours." },
+  { step: '03', title: 'We get on a call', text: "I'll ask questions, look at your setup, and tell you exactly what I'd do first." },
+  { step: '04', title: 'We pick a starting point', text: 'Retainer for ongoing work, a defined project to start smaller, or for the right fit, a profit-share arrangement. Whatever makes sense for where you are.' },
+];
+
+const faqs = [
+  {
+    q: 'Can one person really handle all of this?',
+    a: "Yes. I run the system and own every channel: SEO, email, content, Meta ads, CRO. When a project needs it, I bring in people who are genuinely good at what they do: a designer and developer, a writer, a PPC specialist, and someone I work closely with on growth tactics. You still get one person who owns the strategy and makes sure everything connects.",
+  },
+  {
+    q: 'How do I know your results will transfer to my business?',
+    a: "They're proof of a process, not a single lucky outcome. Connected channels that compound work across ecommerce verticals. I'd rather show you than tell you. A defined project is a good way to see the approach before committing to anything ongoing.",
+  },
+  {
+    q: 'What does this cost?',
+    a: "Depends on scope. Retainers are for businesses that want full-stack marketing run on an ongoing basis. Project work is for a specific deliverable: email setup, SEO audit, content strategy, site build. Either way, it costs less than an agency and less than a full-time hire. We'll talk numbers once I understand your situation.",
+  },
+  {
+    q: 'What if I just need help with one channel?',
+    a: 'Start <a href="https://contentfranchise.com" class="text-[#D97706] underline underline-offset-2">here</a>. Project work is a real option and a low-commitment way to see how I work. Fair warning: once you see what happens when channels actually connect, the single-channel thinking tends to go away.',
+  },
+  {
+    q: 'Are you just using AI to do the work?',
+    a: "AI is part of how I work. I used to write everything myself: every email, every article, every page. Now AI drafts faster, but the strategy, the judgment, and the final call are still mine. The results you're looking at came from years before any of these tools existed.",
+  },
+  {
+    q: 'What does the first 90 days look like?',
+    a: "The first month is mostly diagnostic. I look at everything: analytics, email, site, ads, and existing content. Then I figure out where the biggest gaps are. Almost always, a content strategy is the first thing we build. It's the backbone everything else runs on. By month two something is built and running. By month three the system is taking shape and we're measuring what's working.",
+  },
+  {
+    q: "Isn't AI making SEO pointless?",
+    a: 'No, but it\'s not the same game either. Ranking still matters, but getting cited inside an AI answer is now part of the job too, and that takes different content: clear answers up front, defined terms, real numbers a model can quote. I\'m already seeing sites I run get cited in ChatGPT and Google\'s AI Overview while still sitting on page two, not page one. I wrote up exactly what that looks like and what to do about it <a href="/blog/search-demand-plateau" class="text-[#D97706] underline underline-offset-2">here</a>.',
+  },
+];
+
+const timeline = [
+  { when: 'Oct 2021 – now', what: 'Content Manager, specialty ecommerce retailer', detail: 'Started as an SEO writer. Now run the marketing day to day: content and SEO, the website, Klaviyo email, and Meta ads.' },
+  { when: '2018 – 2021', what: 'Freelance web & marketing consultant', detail: 'WordPress builds, local SEO, and brand work for small businesses.' },
+  { when: '2015 – 2019', what: 'High school English teacher & baseball coach', detail: 'Where the feedback-loop habit started.' },
+];
 ---
 
 <Layout
@@ -8,380 +112,378 @@ import Logo from '../components/Logo.astro';
   description="Most ecommerce brands aren't short on marketing activity. They're short on a system where everything works together. homerunn builds that system."
 >
 
-  <!-- NAV -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E5E5E5]">
-    <div class="max-w-[1100px] mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/"><Logo color="amber" width={120} /></a>
-      <a
-        href="#contact"
-        class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-sm px-5 py-2.5 rounded-[2px] transition-colors"
-      >
-        Let's talk
-      </a>
-    </div>
-  </header>
+  <Header home />
 
   <!-- HERO -->
-  <section class="bg-[#111111] diamond-texture pt-48 pb-32 px-6">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-6">
-        For ecommerce brands doing $100K–$3M in revenue
-      </p>
-      <h1 class="font-sora font-bold text-[clamp(2.75rem,5.5vw,4.5rem)] text-white leading-[1.08] tracking-[-0.02em] mb-6">
-        The best marketing educates and connects. Most brands do one. Few do both.
-      </h1>
-      <p class="font-inter text-[#6B7280] text-xl leading-relaxed mb-6 max-w-[620px]">
-        Most ecommerce brands aren't short on marketing activity. They're short on a system where SEO, email, and ads work as one thing, not three separate projects. That gap is what's costing you sales.
-      </p>
-      <!-- Proof bar -->
-      <div class="flex flex-wrap gap-x-6 gap-y-2 mb-10 font-inter text-[#6B7280] text-sm">
-        <span><span class="text-[#D97706] font-semibold">1,000%+</span> revenue growth</span>
-        <span class="text-[#2A2A2A]">·</span>
-        <span><span class="text-[#D97706] font-semibold">43,000+</span> organic keywords reached</span>
-        <span class="text-[#2A2A2A]">·</span>
-        <span>Meta ads <span class="text-[#D97706] font-semibold">scaled 7x</span> profitably</span>
-        <span class="text-[#2A2A2A]">·</span>
-        <span>Writing <span class="text-[#D97706] font-semibold">cited in Forbes.com</span></span>
+  <section class="bg-[#111111] diamond-texture pt-36 md:pt-44 pb-24 md:pb-32 px-6 overflow-hidden">
+    <div class="relative max-w-[1180px] mx-auto grid lg:grid-cols-[1.12fr_1fr] gap-14 lg:gap-16 items-center">
+      <div class="hero-in">
+        <p class="eyebrow eyebrow-rule mb-7">For ecommerce brands doing $100K–$3M in revenue</p>
+        <h1 class="font-sora font-bold text-[clamp(2.4rem,4vw,3.6rem)] text-white leading-[1.06] tracking-[-0.025em] mb-7">
+          The best marketing educates and connects. <span class="text-[#D97706]">Most brands do one. Few do both.</span>
+        </h1>
+        <p class="font-inter text-[#A3A3A3] text-[19px] leading-relaxed mb-10 max-w-[580px]">
+          Most ecommerce brands aren't short on marketing activity. They're short on a system where SEO, email, and ads work as one thing, not three separate projects. That gap is what's costing you sales.
+        </p>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a
+            href="#contact"
+            class="arrow-link inline-block bg-[#D97706] hover:bg-[#B45309] text-[#111111] font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors"
+          >
+            Start the Conversation <span class="arrow">&rarr;</span>
+          </a>
+          <a href="#results" class="arrow-link font-inter font-semibold text-[15px] text-white hover:text-[#D97706] transition-colors">
+            See the results <span class="arrow">&darr;</span>
+          </a>
+        </div>
       </div>
-      <a
-        href="#contact"
-        class="arrow-link inline-block bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors"
-      >
-        Start the Conversation <span class="arrow">&rarr;</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- THE PROBLEM -->
-  <section class="bg-white py-28 px-6">
-    <div class="max-w-[760px] mx-auto" data-reveal>
-      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">The problem</p>
-      <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-8">Most Brands Have Marketing. Few Have a System.</h2>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        The content exists. There's a product page, maybe some articles, an email list that gets used occasionally. Each piece does something. None of it adds up.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        The gap is usually in two places.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        Brand trust. Buyers can find the products. What they can't find is a reason to trust you specifically: the story, the point of view, the sense that someone real is behind this. Without it, you're one of ten tabs they have open.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-10">
-        The connection between channels. A good article that doesn't feed email. Email that isn't saying what the ads say. Ads driving clicks to pages that can't close. Each channel running on its own means every dollar works harder than it needs to.
-      </p>
-      <ul class="space-y-3">
-        {[
-          "A brand story that's never been written down",
-          "Content that exists but doesn't connect to email, ads, or anything else",
-          "Email that sends but doesn't build or earn",
-          "Channels running independently instead of as one system",
-        ].map((item) => (
-          <li class="flex items-start gap-3">
-            <span class="text-[#D97706] font-bold mt-1">—</span>
-            <span class="font-inter text-[#6B7280] text-lg">{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <!-- THE FIX -->
-  <section class="bg-[#111111] diamond-texture py-28 px-6">
-    <div class="max-w-[760px] mx-auto" data-reveal>
-      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">The fix</p>
-      <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-8">Running Channels Is Not the Same as Having a System.</h2>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        The difference is whether everything is working toward the same thing.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        SEO that reaches people while they're still asking questions, and earns their trust before they're ready to buy. Email that makes the brand feel real, explains the products, and keeps people engaged. Landing pages that close because they've already answered the questions the buyer had. A brand story that makes you memorable instead of interchangeable.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        When those pieces connect, ad costs drop. Conversion goes up. Buyers who were almost ready actually buy. The ones who buy come back.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed">
-        I've been building this for a specialty ecommerce retailer since October 2021. The business has grown more than 1,000%, to $2.7M in annual revenue. That's not an accident of product or timing. It's what happens when the full system is running.
-      </p>
-    </div>
-  </section>
-
-  <!-- WHAT YOU GET -->
-  <section id="services" class="bg-[#F7F7F7] py-28 px-6">
-    <div class="max-w-[1100px] mx-auto">
-      <div class="max-w-[760px] mb-16">
-        <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">What you get</p>
-        <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-4">Full-Stack Growth Marketing. One Operator Running the System.</h2>
-        <p class="font-inter text-[#6B7280] text-lg leading-relaxed">These aren't separate services. They're the parts of one system, built to connect and compound.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8" data-reveal>
-        {[
-          {
-            title: 'Content Strategy & CRO',
-            body: 'The backbone of the system. Articles that build trust and rank, landing pages that convert, product pages that close. Content strategy determines whether everything else compounds.',
-            proof: '53% average order value increase since 2021, through CRO and landing page optimization.',
-          },
-          {
-            title: 'SEO & Search Everywhere',
-            body: "Search isn't just Google anymore. Technical SEO, keyword targeting, and content built to surface wherever your buyers are looking: search engines, AI tools, YouTube, and beyond. Traffic that's already looking for what you sell.",
-            proof: 'One client\'s organic keywords reached 43,000+.',
-          },
-          {
-            title: 'Email Marketing (Klaviyo)',
-            body: "Full email programs built from zero. Flows, campaigns, segmentation, list growth. Email becomes a revenue channel, not a backlog item.",
-            proof: 'Built Klaviyo flows from zero to $903K+ in revenue since launch.',
-          },
-          {
-            title: 'Website Development',
-            body: "I lead the build and bring in a designer and developer to execute it. Brand story, page structure, product presentation. The website is the foundation everything else runs on.",
-            proof: '',
-          },
-          {
-            title: 'Meta Ads',
-            body: 'Campaign strategy, creative direction, audience building, retargeting. Connected to the rest of the system so every dollar works harder.',
-            proof: '',
-          },
-          {
-            title: 'Strategy & Reporting',
-            body: "Clear attribution and honest reporting. You know what's working, what's not, and what to do next. No dashboards full of vanity metrics.",
-            proof: '',
-          },
-        ].map(({ title, body, proof }) => (
-          <div class="bg-white border border-[#E5E5E5] rounded-[2px] p-8">
-            <p class="font-sora font-semibold text-lg text-[#111111] mb-3">{title}</p>
-            <p class="font-inter text-[#6B7280] text-base leading-relaxed mb-3">{body}</p>
-            {proof && <p class="font-inter text-[#D97706] text-sm font-semibold">{proof}</p>}
-          </div>
-        ))}
+      <div class="hero-in">
+        <GrowthChart />
       </div>
     </div>
   </section>
 
   <!-- THE NUMBERS -->
-  <section class="bg-[#111111] diamond-texture py-36 px-6">
-    <div class="max-w-[1100px] mx-auto">
-      <div class="max-w-[760px] mb-16">
-        <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">The numbers</p>
-        <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-4">Results I Can Show You</h2>
-        <p class="font-inter text-[#6B7280] text-lg leading-relaxed">
+  <section id="results" class="bg-[#0B0B0B] border-t border-[#1F1F1F] py-24 md:py-28 px-6 scroll-mt-16">
+    <div class="max-w-[1180px] mx-auto">
+      <div class="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 items-end mb-14">
+        <div>
+          <p class="eyebrow mb-4">The numbers</p>
+          <h2 class="font-sora font-bold text-[clamp(2rem,3.4vw,2.9rem)] text-white leading-[1.1] tracking-[-0.02em]">Results I Can Show You</h2>
+        </div>
+        <p class="font-inter text-[#8A8A8A] text-lg leading-relaxed">
           The average ecommerce brand grows around 8–9% a year. What you see below came from running every channel for a specialty ecommerce retailer, work I'm still doing today. The growth is in the method.
         </p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-[#1F1F1F]" data-reveal>
-        {[
-          { stat: '1,000%+', label: 'Revenue growth since I started, to $2.7M annual' },
-          { stat: '$350K+', label: 'Single-month revenue milestone' },
-          { stat: '$903K+', label: 'Revenue from email flows since June 2025 launch (2,442 orders)' },
-          { stat: '43,000+', label: 'Organic keywords reached, worldwide' },
-          { stat: '53%', label: 'AOV increase since 2021' },
-          { stat: 'Forbes', label: 'Writing cited in a Forbes.com article (200K+ views)' },
-        ].map(({ stat, label }) => (
-          <div class="bg-[#111111] p-10">
-            <p class="stat-num font-sora font-bold text-[clamp(2.5rem,4.5vw,3.75rem)] tracking-[-0.02em] tabular-nums text-[#D97706] mb-2" data-stat={stat}>{stat}</p>
-            <p class="font-inter text-[#6B7280] text-sm leading-snug">{label}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#232323] border border-[#232323]" data-reveal>
+        {stats.map(({ stat, label }) => (
+          <div class="bg-[#0B0B0B] p-9 md:p-10 group">
+            <p class="stat-num font-sora font-bold text-[clamp(2.75rem,4.6vw,4rem)] leading-none tracking-[-0.03em] tabular-nums text-[#D97706] mb-4" data-stat={stat}>{stat}</p>
+            <p class="font-inter text-[#A3A3A3] text-[15px] leading-snug max-w-[280px]">{label}</p>
           </div>
         ))}
       </div>
-      <p class="font-inter text-[#6B7280] text-sm mt-6 max-w-[620px]">
-        The paid ads that drive much of the site's revenue convert because of the brand story, landing pages, and product experience built alongside them. The system is the asset.
-      </p>
+      <div class="mt-6 flex flex-col md:flex-row md:items-start justify-between gap-5">
+        <p class="font-inter text-[#6B7280] text-sm max-w-[680px]">
+          The paid ads that drive much of the site's revenue convert because of the brand story, landing pages, and product experience built alongside them. The system is the asset.
+        </p>
+        <a href="/case-study" class="arrow-link shrink-0 font-inter font-semibold text-[15px] text-white hover:text-[#D97706] transition-colors">Read the full case study <span class="arrow text-[#D97706]">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOW-COMMITMENT WAY IN -->
+  <section class="bg-[#D97706] px-6 py-10">
+    <div class="max-w-[1180px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div>
+        <p class="font-sora font-bold text-[#111111] text-2xl md:text-[1.7rem] leading-tight tracking-[-0.015em] mb-1.5">Not ready for a call?</p>
+        <p class="font-inter text-[#111111] text-[17px] leading-relaxed">Send me your store and your Klaviyo numbers. I'll tell you what I'd fix first.</p>
+      </div>
+      <a href="#contact" data-teardown class="arrow-link shrink-0 inline-block bg-[#111111] hover:bg-[#262626] text-white font-inter font-semibold text-base px-7 py-4 rounded-[2px] transition-colors">
+        Ask for a teardown <span class="arrow text-[#D97706]">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="bg-white py-24 md:py-32 px-6">
+    <div class="max-w-[1180px] mx-auto grid lg:grid-cols-[1fr_1.35fr] gap-12 lg:gap-20" data-reveal>
+      <div class="lg:sticky lg:top-28 self-start">
+        <p class="eyebrow mb-4">The problem</p>
+        <h2 class="font-sora font-bold text-[clamp(2rem,3.4vw,2.9rem)] text-[#111111] leading-[1.1] tracking-[-0.02em]">Most Brands Have Marketing. Few Have a System.</h2>
+      </div>
+      <div>
+        <p class="font-inter text-[#111111] text-xl leading-relaxed mb-6">
+          The content exists. There's a product page, maybe some articles, an email list that gets used occasionally. Each piece does something. None of it adds up.
+        </p>
+        <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-8">
+          The gap is usually in two places.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-5 mb-10">
+          <div class="border-l-2 border-[#D97706] pl-5">
+            <p class="font-sora font-semibold text-[#111111] text-lg mb-2">Brand trust.</p>
+            <p class="font-inter text-[#6B7280] text-base leading-relaxed">Buyers can find the products. What they can't find is a reason to trust you specifically: the story, the point of view, the sense that someone real is behind this. Without it, you're one of ten tabs they have open.</p>
+          </div>
+          <div class="border-l-2 border-[#D97706] pl-5">
+            <p class="font-sora font-semibold text-[#111111] text-lg mb-2">The connection between channels.</p>
+            <p class="font-inter text-[#6B7280] text-base leading-relaxed">A good article that doesn't feed email. Email that isn't saying what the ads say. Ads driving clicks to pages that can't close. Each channel running on its own means every dollar works harder than it needs to.</p>
+          </div>
+        </div>
+        <ul class="divide-y divide-[#EDEDED] border-y border-[#EDEDED]" data-stagger>
+          {[
+            "A brand story that's never been written down",
+            "Content that exists but doesn't connect to email, ads, or anything else",
+            "Email that sends but doesn't build or earn",
+            'Channels running independently instead of as one system',
+          ].map((item) => (
+            <li class="flex items-center gap-4 py-4">
+              <span class="shrink-0 w-6 h-6 rounded-full border border-[#E5E5E5] grid place-items-center text-[#D97706] text-sm leading-none" aria-hidden="true">&times;</span>
+              <span class="font-inter text-[#374151] text-[17px]">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FIX -->
+  <section class="bg-[#111111] diamond-texture py-24 md:py-32 px-6 overflow-hidden">
+    <div class="relative max-w-[1180px] mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-16 items-center" data-reveal>
+      <div>
+        <p class="eyebrow mb-4">The fix</p>
+        <h2 class="font-sora font-bold text-[clamp(2rem,3.4vw,2.9rem)] text-white leading-[1.1] tracking-[-0.02em] mb-8">Running Channels Is Not the Same as Having a System.</h2>
+        <p class="font-inter text-white text-xl leading-relaxed mb-6">
+          The difference is whether everything is working toward the same thing.
+        </p>
+        <p class="font-inter text-[#A3A3A3] text-lg leading-relaxed mb-6">
+          SEO that reaches people while they're still asking questions, and earns their trust before they're ready to buy. Email that makes the brand feel real, explains the products, and keeps people engaged. Landing pages that close because they've already answered the questions the buyer had. A brand story that makes you memorable instead of interchangeable.
+        </p>
+        <p class="font-inter text-[#A3A3A3] text-lg leading-relaxed mb-8">
+          When those pieces connect, ad costs drop. Conversion goes up. Buyers who were almost ready actually buy. The ones who buy come back.
+        </p>
+        <div class="border-l-2 border-[#D97706] pl-5">
+          <p class="font-inter text-white text-lg leading-relaxed">
+            I've been building this for a specialty ecommerce retailer since October 2021. The business has grown more than 1,000%, to $2.7M in annual revenue. That's not an accident of product or timing. It's what happens when the full system is running.
+          </p>
+        </div>
+      </div>
+      <div>
+        <SystemDiagram />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section id="services" class="bg-[#F7F7F7] py-24 md:py-32 px-6 scroll-mt-16">
+    <div class="max-w-[1180px] mx-auto">
+      <div class="grid lg:grid-cols-[1fr_1fr] gap-8 lg:gap-16 items-end mb-14">
+        <div>
+          <p class="eyebrow mb-4">What you get</p>
+          <h2 class="font-sora font-bold text-[clamp(2rem,3.4vw,2.9rem)] text-[#111111] leading-[1.1] tracking-[-0.02em]">Full-Stack Growth Marketing. One Operator Running the System.</h2>
+        </div>
+        <p class="font-inter text-[#6B7280] text-lg leading-relaxed">These aren't separate services. They're the parts of one system, built to connect and compound.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-reveal>
+        <div class="contents" data-stagger>
+          {services.map(({ title, body, proof }, i) => (
+            <div class="svc-card bg-white border border-[#E5E5E5] rounded-[2px] p-8 flex flex-col">
+              <p class="font-sora font-bold text-sm text-[#D97706] tracking-[0.08em] mb-6">{String(i + 1).padStart(2, '0')}</p>
+              <h3 class="font-sora font-semibold text-xl text-[#111111] mb-3 leading-snug">{title}</h3>
+              <p class="font-inter text-[#6B7280] text-[15.5px] leading-relaxed mb-6">{body}</p>
+              {proof && (
+                <p class="mt-auto pt-5 border-t border-[#EDEDED] font-inter text-[13.5px] font-semibold text-[#111111] flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#D97706] shrink-0" aria-hidden="true"></span>{proof}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- WHO THIS IS FOR -->
-  <section class="bg-white py-28 px-6">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#111111] text-lg leading-relaxed mb-16">
-        The brands I work with are building something real. They have a product people actually want, a story worth telling, and usually someone who knows their customer better than any agency ever will. They just need the marketing to catch up. That's the work I'm here for.
+  <section class="bg-white py-24 md:py-32 px-6">
+    <div class="max-w-[1180px] mx-auto">
+      <p class="font-sora font-semibold text-[clamp(1.4rem,2.4vw,1.9rem)] text-[#111111] leading-[1.35] tracking-[-0.01em] max-w-[900px] mb-16" data-reveal>
+        The brands I work with are building something real. They have a product people actually want, a story worth telling, and usually someone who knows their customer better than any agency ever will. <span class="text-[#6B7280]">They just need the marketing to catch up. That's the work I'm here for.</span>
       </p>
-    </div>
-    <div class="max-w-[760px] mx-auto grid md:grid-cols-2 gap-12" data-reveal>
-      <div>
-        <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-6">This is for you if...</p>
-        <ul class="space-y-4">
-          {[
-            'You run an ecommerce brand doing $100K–$3M and marketing is holding you back',
-            "You've tried specialists or agencies and nothing connected",
-            'You want one person to own the system and make sure everything works together',
-            'Your email is underperforming or abandoned entirely',
-            "You know you're leaving money on the table but can't pinpoint where",
-          ].map((item) => (
-            <li class="flex items-start gap-3">
-              <span class="text-[#D97706] font-bold mt-0.5">✓</span>
-              <span class="font-inter text-[#6B7280] text-base leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <p class="font-inter text-[#6B7280] font-semibold text-xs uppercase tracking-[0.22em] mb-6">This probably isn't for you if...</p>
-        <ul class="space-y-4">
-          {[
-            "You need someone to manage a team of marketers (I'm the operator, not the manager)",
-            "You're looking for a pure Google PPC specialist (I can connect you with one)",
-            "You're looking for the cheapest option",
-            "You need results in 30 days (this work compounds over months)",
-          ].map((item) => (
-            <li class="flex items-start gap-3">
-              <span class="text-[#6B7280] font-bold mt-0.5">×</span>
-              <span class="font-inter text-[#6B7280] text-base leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
+      <div class="grid md:grid-cols-2 gap-5" data-reveal>
+        <div class="bg-[#111111] rounded-[2px] p-8 md:p-10">
+          <p class="eyebrow mb-7">This is for you if...</p>
+          <ul class="space-y-5">
+            {forYou.map((item) => (
+              <li class="flex items-start gap-4">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full bg-[#D97706] grid place-items-center text-[#111111] text-[13px] font-bold leading-none" aria-hidden="true">✓</span>
+                <span class="font-inter text-[#E5E5E5] text-base leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="border border-[#E5E5E5] rounded-[2px] p-8 md:p-10">
+          <p class="font-inter text-[#6B7280] font-semibold text-xs uppercase tracking-[0.2em] mb-7">This probably isn't for you if...</p>
+          <ul class="space-y-5">
+            {notForYou.map((item) => (
+              <li class="flex items-start gap-4">
+                <span class="shrink-0 mt-0.5 w-6 h-6 rounded-full border border-[#D4D4D4] grid place-items-center text-[#6B7280] text-sm leading-none" aria-hidden="true">&times;</span>
+                <span class="font-inter text-[#6B7280] text-base leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- HOW TO START -->
-  <section class="bg-[#F7F7F7] py-28 px-6 border-t border-[#E5E5E5]">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">How to start</p>
-      <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-12">Here's How This Works</h2>
-      <div class="space-y-8">
-        {[
-          { step: '01', text: 'Fill out the form below. Tell me about your business and where you\'re stuck.' },
-          { step: '02', text: "I'll review it and get back to you within 48 hours." },
-          { step: '03', text: "We get on a call. I'll ask questions, look at your setup, and tell you exactly what I'd do first." },
-          { step: '04', text: "We pick a starting point. Retainer for ongoing work, a defined project to start smaller, or for the right fit, a profit-share arrangement. Whatever makes sense for where you are." },
-        ].map(({ step, text }) => (
-          <div class="flex items-start gap-6">
-            <span class="font-sora font-bold text-3xl text-[#D97706] w-12 shrink-0">{step}</span>
-            <p class="font-inter text-[#6B7280] text-lg leading-relaxed pt-1">{text}</p>
-          </div>
-        ))}
+  <section id="process" class="bg-[#F7F7F7] py-24 md:py-32 px-6 border-t border-[#E5E5E5] scroll-mt-16">
+    <div class="max-w-[1180px] mx-auto">
+      <div class="max-w-[760px] mb-16">
+        <p class="eyebrow mb-4">How to start</p>
+        <h2 class="font-sora font-bold text-[clamp(2rem,3.4vw,2.9rem)] text-[#111111] leading-[1.1] tracking-[-0.02em]">Here's How This Works</h2>
       </div>
-      <p class="font-inter text-[#6B7280] text-base mt-10 italic">No pressure. Just a conversation about your marketing.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="bg-white py-28 px-6 border-t border-[#E5E5E5]">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">Common questions</p>
-      <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-12">Probably wondering...</h2>
-      <div class="space-y-10">
-        {[
-          {
-            q: 'Can one person really handle all of this?',
-            a: "Yes. I run the system and own every channel: SEO, email, content, Meta ads, CRO. When a project needs it, I bring in people who are genuinely good at what they do: a designer and developer, a writer, a PPC specialist, and someone I work closely with on growth tactics. You still get one person who owns the strategy and makes sure everything connects.",
-          },
-          {
-            q: 'How do I know your results will transfer to my business?',
-            a: "They're proof of a process, not a single lucky outcome. Connected channels that compound work across ecommerce verticals. I'd rather show you than tell you. A defined project is a good way to see the approach before committing to anything ongoing.",
-          },
-          {
-            q: 'What does this cost?',
-            a: "Depends on scope. Retainers are for businesses that want full-stack marketing run on an ongoing basis. Project work is for a specific deliverable: email setup, SEO audit, content strategy, site build. Either way, it costs less than an agency and less than a full-time hire. We'll talk numbers once I understand your situation.",
-          },
-          {
-            q: 'What if I just need help with one channel?',
-            a: 'Start <a href="https://contentfranchise.com" class="text-[#D97706] underline">here</a>. Project work is a real option and a low-commitment way to see how I work. Fair warning: once you see what happens when channels actually connect, the single-channel thinking tends to go away.',
-          },
-          {
-            q: 'Are you just using AI to do the work?',
-            a: "AI is part of how I work. I used to write everything myself: every email, every article, every page. Now AI drafts faster, but the strategy, the judgment, and the final call are still mine. The results you're looking at came from years before any of these tools existed.",
-          },
-          {
-            q: 'What does the first 90 days look like?',
-            a: "The first month is mostly diagnostic. I look at everything: analytics, email, site, ads, and existing content. Then I figure out where the biggest gaps are. Almost always, a content strategy is the first thing we build. It's the backbone everything else runs on. By month two something is built and running. By month three the system is taking shape and we're measuring what's working.",
-          },
-          {
-            q: "Isn't AI making SEO pointless?",
-            a: 'No, but it\'s not the same game either. Ranking still matters, but getting cited inside an AI answer is now part of the job too, and that takes different content: clear answers up front, defined terms, real numbers a model can quote. I\'m already seeing sites I run get cited in ChatGPT and Google\'s AI Overview while still sitting on page two, not page one. I wrote up exactly what that looks like and what to do about it <a href="/blog/search-demand-plateau" class="text-[#D97706] underline">here</a>.',
-          },
-        ].map(({ q, a }) => (
-          <div class="border-b border-[#E5E5E5] pb-10">
-            <p class="font-sora font-semibold text-xl text-[#111111] mb-3">{q}</p>
-            <p class="font-inter text-[#6B7280] text-base leading-relaxed" set:html={a} />
-          </div>
+      <ol class="steps grid md:grid-cols-4 gap-10 md:gap-6" data-reveal>
+        {steps.map(({ step, title, text }) => (
+          <li class="relative flex gap-5 md:block">
+            <span class="relative z-10 shrink-0 grid place-items-center w-14 h-14 rounded-full bg-[#111111] text-[#D97706] font-sora font-bold text-lg md:mb-6 ring-8 ring-[#F7F7F7]">{step}</span>
+            <div>
+              <p class="font-sora font-semibold text-lg text-[#111111] mb-2 md:mt-0 mt-3">{title}</p>
+              <p class="font-inter text-[#6B7280] text-[15.5px] leading-relaxed">{text}</p>
+            </div>
+          </li>
         ))}
-      </div>
+      </ol>
+      <p class="font-inter text-[#6B7280] text-base mt-14 italic">No pressure. Just a conversation about your marketing.</p>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="bg-[#F7F7F7] py-28 px-6 border-t border-[#E5E5E5]">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">About</p>
-      <h2 class="font-sora font-bold text-4xl text-[#111111] leading-tight mb-8">Who's Behind This</h2>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        I'm Marc St. John, a marketer and writer based in Columbus, Ohio.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        Since October 2021 I've led the marketing for a specialty ecommerce retailer. It came in stages. Content strategy and SEO first, then the website, built alongside a designer and developer. In 2025 I added Klaviyo email and Meta ads to what I run directly. Both took off fast: email flows have driven $903K+ in revenue and 2,442 orders since launching in June 2025. The business has grown more than 1,000%, to $2.7M in annual revenue.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
-        Before marketing, I was an English teacher. Every day: original content for over 100 people, progress measured against clear objectives, constant feedback and iteration. The feedback loop is identical.
-      </p>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-8">
-        The other thing that shaped how I work: I spent my whole life playing baseball. Hitting, specifically. High pressure, public, and the feedback is immediate. You barrel it or you don't. What it taught me is to refine the approach, trust the work, and let the numbers tell the truth. Marketing works the same way.
-      </p>
+  <section id="about" class="bg-white py-24 md:py-32 px-6 scroll-mt-16">
+    <div class="max-w-[1180px] mx-auto grid lg:grid-cols-[1.25fr_1fr] gap-14 lg:gap-20">
+      <div data-reveal>
+        <p class="eyebrow mb-4">About</p>
+        <h2 class="font-sora font-bold text-[clamp(2rem,3.4vw,2.9rem)] text-[#111111] leading-[1.1] tracking-[-0.02em] mb-8">Who's Behind This</h2>
+        <p class="font-inter text-[#111111] text-xl leading-relaxed mb-6">
+          I'm Marc St. John, a marketer and writer based in Columbus, Ohio.
+        </p>
+        <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
+          Since October 2021 I've led the marketing for a specialty ecommerce retailer. It came in stages. Content strategy and SEO first, then the website, built alongside a designer and developer. In 2025 I added Klaviyo email and Meta ads to what I run directly. Both took off fast: email flows have driven $903K+ in revenue and 2,442 orders since launching in June 2025. The business has grown more than 1,000%, to $2.7M in annual revenue.
+        </p>
+        <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6">
+          Before marketing, I was an English teacher. Every day: original content for over 100 people, progress measured against clear objectives, constant feedback and iteration. The feedback loop is identical.
+        </p>
+        <p class="font-inter text-[#6B7280] text-lg leading-relaxed">
+          The other thing that shaped how I work: I spent my whole life playing baseball. Hitting, specifically. High pressure, public, and the feedback is immediate. You barrel it or you don't. What it taught me is to refine the approach, trust the work, and let the numbers tell the truth. Marketing works the same way.
+        </p>
+      </div>
+      <aside class="self-start lg:sticky lg:top-28" data-reveal>
+        <div class="bg-[#111111] rounded-[2px] p-8 md:p-10">
+          <p class="eyebrow mb-8">Track record</p>
+          <ol class="relative border-l border-[#2E2E2E] ml-1.5 space-y-9">
+            {timeline.map(({ when, what, detail }, i) => (
+              <li class="pl-7 relative">
+                <span class={`absolute -left-[6.5px] top-1.5 w-3 h-3 rounded-full ${i === 0 ? 'bg-[#D97706]' : 'bg-[#111111] border border-[#6B7280]'}`} aria-hidden="true"></span>
+                <p class="font-inter text-[12.5px] font-semibold tracking-[0.12em] uppercase text-[#8A8A8A] mb-1.5">{when}</p>
+                <p class="font-sora font-semibold text-white text-[17px] leading-snug mb-1.5">{what}</p>
+                <p class="font-inter text-[#A3A3A3] text-[14.5px] leading-relaxed">{detail}</p>
+              </li>
+            ))}
+          </ol>
+          <div class="mt-9 pt-7 border-t border-[#262626] font-inter text-[14px] text-[#A3A3A3] leading-relaxed">
+            <p>MEd, University of Toledo</p>
+            <p>BA English, Capital University</p>
+            <p class="mt-3 text-white">Writing cited in Forbes.com</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F7F7F7] py-24 md:py-32 px-6 border-t border-[#E5E5E5]">
+    <div class="max-w-[1180px] mx-auto grid lg:grid-cols-[1fr_1.6fr] gap-10 lg:gap-20">
+      <div class="lg:sticky lg:top-28 self-start">
+        <p class="eyebrow mb-4">Common questions</p>
+        <h2 class="font-sora font-bold text-[clamp(2rem,3.4vw,2.9rem)] text-[#111111] leading-[1.1] tracking-[-0.02em] mb-6">Probably wondering...</h2>
+        <p class="font-inter text-[#6B7280] text-lg leading-relaxed">Something not covered here? <a href="#contact" class="text-[#111111] font-semibold underline decoration-[#D97706] decoration-2 underline-offset-4 hover:text-[#D97706] transition-colors">Ask me directly.</a></p>
+      </div>
+      <div class="border-t border-[#E0E0E0]">
+        {faqs.map(({ q, a }, i) => (
+          <details class="faq group border-b border-[#E0E0E0]" open={i === 0}>
+            <summary class="flex items-start justify-between gap-6 py-6">
+              <span class="font-sora font-semibold text-lg md:text-xl text-[#111111] leading-snug group-hover:text-[#B45309] transition-colors">{q}</span>
+              <span class="faq-icon shrink-0 mt-1 w-7 h-7 rounded-full border border-[#D4D4D4] grid place-items-center text-[#111111] text-lg leading-none" aria-hidden="true">+</span>
+            </summary>
+            <p class="font-inter text-[#4B5563] text-base leading-relaxed pb-7 pr-12 -mt-1" set:html={a} />
+          </details>
+        ))}
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="bg-[#111111] diamond-texture py-28 px-6">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-xs uppercase tracking-[0.22em] mb-4">Get in touch</p>
-      <h2 class="font-sora font-bold text-4xl text-white leading-tight mb-4">
-        Ready to build marketing that compounds?
-      </h2>
-      <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-12">
-        Fill out the form. Tell me where you are and what's not moving. I'll get back to you within 48 hours and tell you honestly if I can help.
-      </p>
-      <form name="contact" method="POST" data-netlify="true" class="space-y-5">
+  <section id="contact" class="bg-[#111111] diamond-texture py-24 md:py-32 px-6 scroll-mt-16">
+    <div class="relative max-w-[1180px] mx-auto grid lg:grid-cols-[1fr_1.25fr] gap-14 lg:gap-20">
+      <div>
+        <p class="eyebrow mb-4">Get in touch</p>
+        <h2 class="font-sora font-bold text-[clamp(2.2rem,3.8vw,3.2rem)] text-white leading-[1.08] tracking-[-0.02em] mb-6">
+          Ready to build marketing that compounds?
+        </h2>
+        <p class="font-inter text-[#A3A3A3] text-lg leading-relaxed mb-10">
+          Fill out the form. Tell me where you are and what's not moving. I'll get back to you within 48 hours and tell you honestly if I can help.
+        </p>
+        <ul class="space-y-4 font-inter text-[15px]">
+          {[
+            'I read every message myself',
+            'A reply within 48 hours',
+            "An honest answer on whether I'm the right fit",
+          ].map((item) => (
+            <li class="flex items-center gap-3 text-[#E5E5E5]">
+              <span class="w-5 h-5 rounded-full bg-[#D97706] grid place-items-center text-[#111111] text-[11px] font-bold leading-none" aria-hidden="true">✓</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <form name="contact" method="POST" data-netlify="true" class="bg-[#141414] border border-[#262626] rounded-[2px] p-7 md:p-9 space-y-5">
         <input type="hidden" name="form-name" value="contact" />
+        <fieldset>
+          <legend class="block font-inter text-[#A3A3A3] text-sm mb-3">What are you after?</legend>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="choice">
+              <input type="radio" name="request" value="Work together" checked />
+              <span><b>Work together</b>Talk through a retainer or a project</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="request" value="Teardown" id="request-teardown" />
+              <span><b>A teardown</b>Tell me what you'd fix first</span>
+            </label>
+          </div>
+        </fieldset>
         <div class="grid md:grid-cols-2 gap-5">
           <div>
-            <label for="name" class="block font-inter text-[#6B7280] text-sm mb-2">Your name</label>
-            <input id="name" name="name" type="text" required
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
-              placeholder="Jane Smith" />
+            <label for="name" class="block font-inter text-[#A3A3A3] text-sm mb-2">Your name</label>
+            <input id="name" name="name" type="text" required class="field" placeholder="Jane Smith" />
           </div>
           <div>
-            <label for="business" class="block font-inter text-[#6B7280] text-sm mb-2">Business name</label>
-            <input id="business" name="business" type="text"
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
-              placeholder="Your Brand" />
+            <label for="business" class="block font-inter text-[#A3A3A3] text-sm mb-2">Business name</label>
+            <input id="business" name="business" type="text" class="field" placeholder="Your Brand" />
           </div>
         </div>
         <div class="grid md:grid-cols-2 gap-5">
           <div>
-            <label for="website" class="block font-inter text-[#6B7280] text-sm mb-2">Website URL</label>
-            <input id="website" name="website" type="text"
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
-              placeholder="https://yourbrand.com" />
+            <label for="website" class="block font-inter text-[#A3A3A3] text-sm mb-2">Website URL</label>
+            <input id="website" name="website" type="text" class="field" placeholder="https://yourbrand.com" />
           </div>
           <div>
-            <label for="email" class="block font-inter text-[#6B7280] text-sm mb-2">Email address</label>
-            <input id="email" name="email" type="email" required
-              class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors"
-              placeholder="your@email.com" />
+            <label for="email" class="block font-inter text-[#A3A3A3] text-sm mb-2">Email address</label>
+            <input id="email" name="email" type="email" required class="field" placeholder="your@email.com" />
           </div>
         </div>
         <div>
-          <label for="message" class="block font-inter text-[#6B7280] text-sm mb-2">What's your biggest marketing challenge right now?</label>
-          <textarea id="message" name="message" rows="5" required
-            class="w-full bg-[#1A1A1A] border border-[#2A2A2A] text-white font-inter text-base px-4 py-3 rounded-[2px] focus:outline-none focus:border-[#D97706] transition-colors resize-none"
+          <label for="message" class="block font-inter text-[#A3A3A3] text-sm mb-2">What's your biggest marketing challenge right now?</label>
+          <textarea id="message" name="message" rows="5" required class="field resize-none"
             placeholder="Tell me where you are. Revenue, channels you're running, what's not moving..."></textarea>
         </div>
         <button type="submit"
-          class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors">
-          Let's Talk
+          class="arrow-link w-full md:w-auto bg-[#D97706] hover:bg-[#B45309] text-[#111111] font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors">
+          Let's Talk <span class="arrow">&rarr;</span>
         </button>
       </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#111111] border-t border-[#1F1F1F] py-8 px-6">
-    <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <a href="/"><Logo color="amber" width={100} /></a>
-      <p class="font-inter text-[#6B7280] text-sm">&copy; {new Date().getFullYear()} homerunn. Columbus, OH.</p>
-      <a href="/blog" class="font-inter text-[#6B7280] hover:text-white text-sm transition-colors">Blog</a>
-    </div>
-  </footer>
+  <Footer />
 
   <script>
+    // "Ask for a teardown" preselects that option in the form
+    document.querySelectorAll('[data-teardown]').forEach((el) =>
+      el.addEventListener('click', () => {
+        const r = document.getElementById('request-teardown') as HTMLInputElement | null;
+        if (r) r.checked = true;
+      })
+    );
+
     // Scroll reveal
     const revealEls = document.querySelectorAll('[data-reveal]');
     const revealObserver = new IntersectionObserver(
@@ -393,7 +495,7 @@ import Logo from '../components/Logo.astro';
           }
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.12 }
     );
     revealEls.forEach((el) => revealObserver.observe(el));
 

@@ -1,0 +1,42 @@
+---
+import Logo from './Logo.astro';
+
+interface Props {
+  home?: boolean;
+}
+
+const { home = false } = Astro.props;
+const base = home ? '' : '/';
+
+const links = [
+  { href: `${base}#results`, label: 'Results' },
+  { href: `${base}#services`, label: 'Services' },
+  { href: `${base}#process`, label: 'How it works' },
+  { href: `${base}#about`, label: 'About' },
+  { href: '/blog', label: 'Blog' },
+];
+---
+
+<header id="site-header" class="site-header fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-[1180px] mx-auto px-6 h-[68px] flex items-center justify-between gap-6">
+    <a href="/" aria-label="homerunn home" class="shrink-0"><Logo color="amber" width={124} /></a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Main">
+      {links.map(({ href, label }) => (
+        <a href={href} class="nav-link font-inter text-[14px] font-medium text-[#A3A3A3] hover:text-white transition-colors">{label}</a>
+      ))}
+    </nav>
+    <a
+      href={`${base}#contact`}
+      class="arrow-link shrink-0 bg-[#D97706] hover:bg-[#B45309] text-[#111111] font-inter font-semibold text-sm px-5 py-2.5 rounded-[2px] transition-colors"
+    >
+      Let's talk <span class="arrow">&rarr;</span>
+    </a>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('site-header');
+  const onScroll = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>

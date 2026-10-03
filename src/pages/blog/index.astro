@@ -1,83 +1,83 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
-import Logo from '../../components/Logo.astro';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const [featured, ...rest] = posts;
 ---
 
-<Layout title="Blog — Homerunn" description="Marketing insights from Marc St. John. Real strategies, real numbers.">
+<Layout title="Blog — homerunn" description="Marketing insights from Marc St. John. Real strategies, real numbers.">
 
-  <!-- NAV -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E5E5E5]">
-    <div class="max-w-[1100px] mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/"><Logo /></a>
-      <a
-        href="/#contact"
-        class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-sm px-5 py-2.5 rounded transition-colors"
-      >
-        Let's talk
-      </a>
-    </div>
-  </header>
+  <Header />
 
   <!-- HEADER -->
-  <section class="bg-[#111111] pt-36 pb-20 px-6">
-    <div class="max-w-[760px] mx-auto">
-      <p class="font-inter text-[#D97706] font-semibold text-sm uppercase tracking-widest mb-4">Blog</p>
-      <h1 class="font-sora font-bold text-5xl text-white leading-tight mb-4">
+  <section class="bg-[#111111] diamond-texture pt-40 pb-20 px-6">
+    <div class="relative max-w-[1180px] mx-auto hero-in">
+      <p class="eyebrow eyebrow-rule mb-6">The blog</p>
+      <h1 class="font-sora font-bold text-[clamp(2.6rem,5vw,4rem)] text-white leading-[1.05] tracking-[-0.025em] mb-5 max-w-[760px]">
         Marketing that performs.
       </h1>
-      <p class="font-inter text-[#6B7280] text-lg">
+      <p class="font-inter text-[#A3A3A3] text-xl">
         Real strategies. Real numbers. No fluff.
       </p>
     </div>
   </section>
 
   <!-- POSTS -->
-  <section class="bg-white py-20 px-6">
-    <div class="max-w-[760px] mx-auto">
+  <section class="bg-[#F7F7F7] py-20 md:py-24 px-6">
+    <div class="max-w-[1180px] mx-auto">
       {posts.length === 0 ? (
         <p class="font-inter text-[#6B7280] text-lg">No posts yet. Check back soon.</p>
       ) : (
-        <div class="divide-y divide-[#E5E5E5]">
-          {posts.map((post) => (
-            <article class="py-10">
-              <time class="font-inter text-[#6B7280] text-sm">
-                {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-              </time>
-              <h2 class="font-sora font-bold text-2xl text-[#111111] leading-tight mt-2 mb-3">
-                <a href={`/blog/${post.id}`} class="hover:text-[#D97706] transition-colors">
-                  {post.data.title}
-                </a>
+        <div class="space-y-5">
+          {featured && (
+            <a href={`/blog/${featured.id}`} class="svc-card group block bg-white border border-[#E5E5E5] rounded-[2px] p-8 md:p-12">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="font-inter text-[11px] font-semibold tracking-[0.18em] uppercase bg-[#111111] text-[#D97706] px-2.5 py-1 rounded-[2px]">Latest</span>
+                <time class="font-inter text-[#6B7280] text-sm">{fmt(featured.data.date)}</time>
+              </div>
+              <h2 class="font-sora font-bold text-[clamp(1.6rem,3vw,2.4rem)] text-[#111111] leading-[1.15] tracking-[-0.015em] mb-4 max-w-[860px] group-hover:text-[#B45309] transition-colors">
+                {featured.data.title}
               </h2>
-              <p class="font-inter text-[#6B7280] text-base leading-relaxed mb-4">
-                {post.data.description}
-              </p>
-              <a
-                href={`/blog/${post.id}`}
-                class="font-inter font-semibold text-[#D97706] text-sm hover:text-[#B45309] transition-colors"
-              >
-                Read more &rarr;
+              <p class="font-inter text-[#6B7280] text-lg leading-relaxed mb-6 max-w-[760px]">{featured.data.description}</p>
+              <span class="arrow-link font-inter font-semibold text-[#111111] text-[15px]">Read the post <span class="arrow text-[#D97706]">&rarr;</span></span>
+            </a>
+          )}
+          <div class="grid md:grid-cols-2 gap-5">
+            {rest.map((post) => (
+              <a href={`/blog/${post.id}`} class="svc-card group flex flex-col bg-white border border-[#E5E5E5] rounded-[2px] p-8">
+                <time class="font-inter text-[#6B7280] text-sm mb-4">{fmt(post.data.date)}</time>
+                <h2 class="font-sora font-bold text-xl md:text-2xl text-[#111111] leading-snug mb-3 group-hover:text-[#B45309] transition-colors">
+                  {post.data.title}
+                </h2>
+                <p class="font-inter text-[#6B7280] text-base leading-relaxed mb-6">{post.data.description}</p>
+                <span class="arrow-link mt-auto font-inter font-semibold text-[#111111] text-[15px]">Read the post <span class="arrow text-[#D97706]">&rarr;</span></span>
               </a>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
       )}
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#111111] border-t border-[#1F1F1F] py-8 px-6">
-    <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <a href="/"><Logo /></a>
-      <p class="font-inter text-[#6B7280] text-sm">
-        &copy; {new Date().getFullYear()} Homerunn. Columbus, OH.
-      </p>
-      <a href="/blog" class="font-inter text-[#6B7280] hover:text-white text-sm transition-colors">Blog</a>
+  <!-- CTA -->
+  <section class="bg-[#111111] diamond-texture py-20 px-6">
+    <div class="relative max-w-[1180px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <div>
+        <h2 class="font-sora font-bold text-3xl md:text-4xl text-white leading-tight tracking-[-0.02em] mb-3">Want this running for your brand?</h2>
+        <p class="font-inter text-[#A3A3A3] text-lg">Tell me where you are. I'll tell you what I'd fix first.</p>
+      </div>
+      <a href="/#contact" class="arrow-link shrink-0 inline-block bg-[#D97706] hover:bg-[#B45309] text-[#111111] font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors">
+        Start the Conversation <span class="arrow">&rarr;</span>
+      </a>
     </div>
-  </footer>
+  </section>
+
+  <Footer />
 
 </Layout>

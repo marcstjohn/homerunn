@@ -1,0 +1,60 @@
+---
+// The core thesis as a picture: five channels on one loop, one operator in the
+// middle holding every handoff. Functional, not decorative.
+const C = 240;
+const R = 165;
+const nodes = ['SEO', 'Content', 'Email', 'Ads', 'CRO'].map((label, i) => {
+  const a = ((-90 + i * 72) * Math.PI) / 180;
+  return { label, x: +(C + R * Math.cos(a)).toFixed(1), y: +(C + R * Math.sin(a)).toFixed(1) };
+});
+---
+
+<svg id="system-diagram" viewBox="0 0 480 480" class="w-full h-auto block max-w-[460px] mx-auto" role="img" aria-label="SEO, content, email, ads, and CRO connected in one loop, with one operator at the center owning every handoff.">
+  <defs>
+    <path id="sd-loop" d={`M ${C} ${C - R} a ${R} ${R} 0 1 1 0 ${2 * R} a ${R} ${R} 0 1 1 0 ${-2 * R}`} />
+  </defs>
+
+  <!-- spokes -->
+  <g stroke="#2E2E2E" stroke-width="1">
+    {nodes.map((n) => <line x1={C} y1={C} x2={n.x} y2={n.y} />)}
+  </g>
+
+  <!-- the loop -->
+  <circle cx={C} cy={C} r={R} fill="none" stroke="#3A2A12" stroke-width="2" />
+  <circle class="sd-flow" cx={C} cy={C} r={R} fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="6 14" stroke-linecap="round" />
+
+  <!-- a lead travelling the loop -->
+  <circle r="5" fill="#FFFFFF">
+    <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#sd-loop" />
+    </animateMotion>
+  </circle>
+
+  <!-- channels -->
+  {nodes.map((n) => (
+    <g>
+      <circle cx={n.x} cy={n.y} r="40" fill="#161616" stroke="#D97706" stroke-width="1.5" />
+      <text x={n.x} y={n.y + 5} text-anchor="middle" class="sd-label">{n.label}</text>
+    </g>
+  ))}
+
+  <!-- the operator -->
+  <circle cx={C} cy={C} r="62" fill="#D97706" />
+  <text x={C} y={C - 4} text-anchor="middle" class="sd-center">One</text>
+  <text x={C} y={C + 18} text-anchor="middle" class="sd-center">operator</text>
+</svg>
+
+<style>
+  .sd-label { font: 600 14px 'Inter', sans-serif; fill: #FFFFFF; letter-spacing: .01em; }
+  .sd-center { font: 700 17px 'Sora', sans-serif; fill: #111111; letter-spacing: -.01em; }
+  @media (prefers-reduced-motion: no-preference) {
+    .sd-flow { animation: sd-flow 2.4s linear infinite; }
+  }
+  @keyframes sd-flow { to { stroke-dashoffset: -40; } }
+</style>
+
+<script>
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    (document.getElementById('system-diagram') as unknown as SVGSVGElement | null)?.pauseAnimations();
+  }
+</script>

@@ -28,11 +28,11 @@ The system was missing.
 
 Most brands send a discount code and stop there. A real welcome sequence does more than that. It tells the brand story, earns trust, and gives the subscriber a reason to stay engaged before they've spent a dollar. The goal is not just a first purchase. It's to make them feel like they made the right call signing up.
 
-**Cart abandonment.** Seven emails. Not one, not three. Seven.
+**Cart abandonment.** A multi-email sequence, not a single reminder.
 
 The sequence moves through stages: reminder, validation, urgency. Each email has a different job, and the later emails exist because some people genuinely need more time. Most brands cut the sequence short and leave those people behind.
 
-**Browse abandonment.** Five emails. Someone visited a product page and left without adding anything to their cart. Weaker signal than cart abandonment, so the sequence is softer. But it catches people who were interested and just needed a nudge. Most brands never follow up with them at all.
+**Browse abandonment.** A shorter sequence. Someone visited a product page and left without adding anything to their cart. Weaker signal than cart abandonment, so the sequence is softer. But it catches people who were interested and just needed a nudge. Most brands never follow up with them at all.
 
 **Site abandonment.** Catches people who left before browsing a specific product. They landed on the site but never made it to a product page. Broader signal, so the messaging is broader. Worth running because it captures visitors the other flows miss entirely.
 

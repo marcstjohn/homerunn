@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Logo from '../../components/Logo.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -13,65 +14,53 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const words = (post.body ?? '').split(/\s+/).filter(Boolean).length;
+const minutes = Math.max(1, Math.round(words / 230));
 ---
 
 <Layout title={`${post.data.title} — homerunn`} description={post.data.description}>
 
-  <!-- NAV -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E5E5E5]">
-    <div class="max-w-[1100px] mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/"><Logo color="amber" width={120} /></a>
-      <a
-        href="/#contact"
-        class="bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-sm px-5 py-2.5 rounded transition-colors"
-      >
-        Let's talk
-      </a>
-    </div>
-  </header>
+  <Header />
 
   <!-- ARTICLE HEADER -->
-  <section class="bg-[#111111] pt-36 pb-16 px-6">
-    <div class="max-w-[760px] mx-auto">
-      <a href="/blog" class="font-inter text-[#6B7280] text-sm hover:text-white transition-colors mb-6 inline-block">&larr; Back to blog</a>
-      <time class="font-inter text-[#D97706] text-sm font-semibold block mb-4">
-        {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-      </time>
-      <h1 class="font-sora font-bold text-4xl md:text-5xl text-white leading-tight">
+  <section class="bg-[#111111] diamond-texture pt-40 pb-20 px-6">
+    <div class="relative max-w-[820px] mx-auto hero-in">
+      <a href="/blog" class="arrow-link inline-flex items-center gap-2 font-inter text-[#A3A3A3] text-sm hover:text-white transition-colors mb-10"><span class="arrow rotate-180 inline-block">&rarr;</span> All posts</a>
+      <p class="eyebrow mb-5">
+        <time>{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</time>
+        <span class="text-[#6B7280] mx-2">·</span><span class="text-[#A3A3A3]">{minutes} min read</span>
+      </p>
+      <h1 class="font-sora font-bold text-[clamp(2.2rem,4.6vw,3.5rem)] text-white leading-[1.08] tracking-[-0.022em] mb-6">
         {post.data.title}
       </h1>
+      <p class="font-inter text-[#A3A3A3] text-lg md:text-xl leading-relaxed max-w-[700px]">{post.data.description}</p>
+      <p class="font-inter text-sm text-[#8A8A8A] mt-10 pt-6 border-t border-[#262626]">By <span class="text-white font-medium">Marc St. John</span>, homerunn</p>
     </div>
   </section>
 
   <!-- ARTICLE BODY -->
-  <section class="bg-white py-16 px-6">
-    <div class="max-w-[760px] mx-auto prose-styles">
+  <section class="bg-white py-16 md:py-20 px-6">
+    <div class="max-w-[720px] mx-auto prose-styles">
       <Content />
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="bg-[#F7F7F7] py-16 px-6 border-t border-[#E5E5E5]">
-    <div class="max-w-[760px] mx-auto text-center">
-      <p class="font-sora font-bold text-2xl text-[#111111] mb-3">Ready to talk?</p>
-      <p class="font-inter text-[#6B7280] text-lg mb-6">If this resonated, let's see if it makes sense to work together.</p>
+  <section class="bg-[#111111] diamond-texture py-20 px-6">
+    <div class="relative max-w-[820px] mx-auto">
+      <p class="eyebrow mb-4">Work with me</p>
+      <h2 class="font-sora font-bold text-3xl md:text-4xl text-white leading-tight tracking-[-0.02em] mb-4">Ready to talk?</h2>
+      <p class="font-inter text-[#A3A3A3] text-lg mb-8">If this resonated, let's see if it makes sense to work together.</p>
       <a
         href="/#contact"
-        class="inline-block bg-[#D97706] hover:bg-[#B45309] text-white font-inter font-semibold text-base px-8 py-4 rounded transition-colors"
+        class="arrow-link inline-block bg-[#D97706] hover:bg-[#B45309] text-[#111111] font-inter font-semibold text-base px-8 py-4 rounded-[2px] transition-colors"
       >
-        Get in touch
+        Get in touch <span class="arrow">&rarr;</span>
       </a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#111111] border-t border-[#1F1F1F] py-8 px-6">
-    <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <a href="/"><Logo color="amber" width={100} /></a>
-      <p class="font-inter text-[#6B7280] text-sm">&copy; {new Date().getFullYear()} homerunn. Columbus, OH.</p>
-      <a href="/blog" class="font-inter text-[#6B7280] hover:text-white text-sm transition-colors">Blog</a>
-    </div>
-  </footer>
+  <Footer />
 
 </Layout>
 

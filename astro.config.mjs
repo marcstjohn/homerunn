@@ -13,5 +13,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap()]
+  // case-study is noindex on purpose (client protection), so keep it out of the sitemap too
+  integrations: [sitemap({ filter: (page) => !page.includes('/case-study') })]
 });
